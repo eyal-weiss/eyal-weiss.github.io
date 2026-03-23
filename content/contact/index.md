@@ -15,7 +15,7 @@ ShowToc: false
 How to find me on The Web:
 
 - [Google Scholar](https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en)
-- [LinkedIn](https://www.linkedin.com/in/eyal-weiss-ba3b3383)
+- [LinkedIn](https://www.linkedin.com/in/eyal-weiss-research)
 - [ResearchGate](https://www.researchgate.net/profile/Eyal-Weiss-2)
 - [YouTube](https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw/playlists)
 - [Semantic Scholar](https://www.semanticscholar.org/author/Eyal-Weiss/2017820)
