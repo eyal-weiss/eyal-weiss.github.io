@@ -1,91 +1,70 @@
 ---
-title: "Publications"
+title: "Selected Publications"
 layout: "single"
 url: "/publications/"
-summary: "Publications"
-ShowToc: false
+summary: "Selected Publications"
+ShowToc: true
+TocOpen: true
 ---
 
-All my articles are either available through open-access publication platforms (such as [AAAI Publications](https://ojs.aaai.org/)) or, when officially published in closed-access platforms, open access is possible through [arXiv](https://arxiv.org/). See also my [Google Scholar profile](https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en).
+For a full list, see my [Google Scholar](https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en) profile.
 
----
+## Combinatorial Search
 
-## 2025
+[Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions](https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/1923.pdf)
+Y. Wang, B. Mu, **E. Weiss**, O. Salzman — *IJCAI 2025*
+`bidirectional search` `meet-in-the-middle` `termination conditions`
 
-**From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem** 🏆 Best Paper Award
-Y. Sherma, **E. Weiss**, O. Salzman
-*SoCS 2025* · [Paper](https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140) · [Code](https://github.com/CRL-Technion/wh-rearrangement)
+[Generalizing Multi-Objective Search via Objective-Aggregation Functions](https://arxiv.org/abs/2509.22085)
+H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *arXiv preprint*
+`multi-objective search` `objective aggregation` `robotics planning`
 
-**Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions**
-Y. Wang, B. Mu, **E. Weiss**, O. Salzman
-*IJCAI 2025* · [Paper](https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/1923.pdf) · [Code](https://github.com/yi213-robotic/MEET)
+[Tightest Admissible Shortest Path](https://ojs.aaai.org/index.php/ICAPS/article/download/31527/33687)
+**E. Weiss**, A. Felner, G. A. Kaminka — *ICAPS 2024*
+`shortest path` `admissible heuristics` `graph search`
 
-**PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning**
-D. Gnad, L. Alon, **E. Weiss**, A. Shleyfman
-*AAAI 2025* · [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/34851) · [Code](https://github.com/dgnad/numeric-fast-downward)
+[A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates](https://ebooks.iospress.nl/doi/10.3233/FAIA230567)
+**E. Weiss**, A. Felner, G. A. Kaminka — *ECAI 2023*
+`shortest path` `multiple edge costs` `cost uncertainty`
 
-**Asymptotically Optimal Sampling-Based Motion Planning Through Anytime Incremental Lazy Bidirectional Heuristic Search**
-Y. Wang, **E. Weiss**, O. Salzman
-*ICRA 2025* · [Code](https://github.com/yi213-robotic/BLITstar-ICRA2025) · Integrated into [OMPL](https://ompl.kavrakilab.org/)
+## AI Planning
 
-**Generalizing Multi-Objective Search via Objective-Aggregation Functions**
-H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman
-*arXiv preprint*
+[PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning](https://ojs.aaai.org/index.php/AAAI/article/view/34851)
+D. Gnad, L. Alon, **E. Weiss**, A. Shleyfman — *AAAI 2025*
+`numeric planning` `pattern databases` `heuristic search`
 
-## 2024
+[Planning with Multiple Action-Cost Estimates](https://ojs.aaai.org/index.php/ICAPS/article/view/27222/26995)
+**E. Weiss**, G. A. Kaminka — *ICAPS 2023*
+`action-cost estimation` `dynamic models` `classical planning`
 
-**Tightest Admissible Shortest Path**
-**E. Weiss**, A. Felner, G. A. Kaminka
-*ICAPS 2024* · [Paper](https://ojs.aaai.org/index.php/ICAPS/article/download/31527/33687) · [Slides](https://drive.google.com/file/d/1E-PZbR-rdsMR06RYLdCF_LaSYEZ3Nqu7/view?usp=sharing)
+[Position Paper: Online Modeling for Offline Planning](https://icaps22.icaps-conference.org/workshops/RDDPS/papers/weiss_kaminka_rddps22b.pdf)
+**E. Weiss**, G. A. Kaminka — *RDDPS Workshop, ICAPS 2022*
+`online learning` `action models` `planning under uncertainty`
 
-**PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning** *(workshop version)*
-D. Gnad, L. Alon, **E. Weiss**, A. Shleyfman
-*HSDIP Workshop, ICAPS 2024* · [Paper](https://icaps24.icaps-conference.org/program/workshops/hsdip-papers/paper_13.pdf)
+## Motion Planning & Robotics
 
-## 2023
+To be updated soon 😊
 
-**Planning with Multiple Action-Cost Estimates**
-**E. Weiss**, G. A. Kaminka
-*ICAPS 2023* · [Paper](https://ojs.aaai.org/index.php/ICAPS/article/view/27222/26995) · [Slides](https://drive.google.com/file/d/1qaPohmZJ9OpwGYdyVhF1xxvoIO47_5t6/view?usp=sharing) · [Code](https://github.com/eyal-weiss/plandem-public)
+## Multi-Agent Systems
 
-**A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates**
-**E. Weiss**, A. Felner, G. A. Kaminka
-*ECAI 2023* · [Paper](https://ebooks.iospress.nl/doi/10.3233/FAIA230567) · [Slides](https://drive.google.com/file/d/17B8nALpJM_KcKoLu_4MVd0O6vVdo0PGR/view?usp=sharing) · [Poster](https://drive.google.com/file/d/1SiKEu8efxK2FMMrWa9Ithv1I0TCteZuN/view?usp=sharing)
+[From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem](https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140) 🏆 Best Paper Award
+Y. Sherma, **E. Weiss**, O. Salzman — *SoCS 2025*
+`multi-agent planning` `warehouse rearrangement` `makespan optimization`
 
-**A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates** *(student abstract)*
-**E. Weiss**, A. Felner, G. A. Kaminka
-*SoCS 2023 Doctoral Consortium* · [Paper](https://ojs.aaai.org/index.php/SOCS/article/view/27316/27089) · [Slides](https://drive.google.com/file/d/1CEJiZ71nGrbNj3jiBYVVEcAuDr6B9FSs/view?usp=sharing)
+## Control Theory & Dynamical Systems
 
-## 2022
+[A Generalization of Linear Positive Systems with Applications to Nonlinear Systems: Invariant Sets and the Poincaré–Bendixson Property](https://arxiv.org/abs/1902.01630)
+**E. Weiss**, M. Margaliot — *Automatica, 2021*
+`positive systems` `invariant sets` `nonlinear systems` `Poincaré–Bendixson`
 
-**Planning with Dynamically Estimated Action Costs**
-**E. Weiss**, G. A. Kaminka
-*RDDPS Workshop, ICAPS 2022* · [Paper](https://icaps22.icaps-conference.org/workshops/RDDPS/papers/weiss_kaminka_rddps22a.pdf) · [Slides](https://drive.google.com/file/d/1oJqYk45f0eqC2mSPmgExh2kldeQNXRLy/view?usp=sharing) · [Video](https://youtu.be/aCBKqSCOGb8)
+[Output Selection and Observer Design for Boolean Control Networks: A Sub-Optimal Polynomial-Complexity Algorithm](https://arxiv.org/abs/1807.07864)
+**E. Weiss**, M. Margaliot — *IEEE Control Systems Letters, 2019*
+`Boolean control networks` `observer design` `output selection`
 
-**Position Paper: Online Modeling for Offline Planning**
-**E. Weiss**, G. A. Kaminka
-*RDDPS Workshop, ICAPS 2022* · [Paper](https://icaps22.icaps-conference.org/workshops/RDDPS/papers/weiss_kaminka_rddps22b.pdf) · [Slides](https://drive.google.com/file/d/1qa2Jz0LVd97nhXMtDjzPPtd8EBTUu1sY/view?usp=sharing) · [Video](https://youtu.be/VgrhnX9q3-c)
+[A Polynomial-Time Algorithm for Solving the Minimal Observability Problem in Conjunctive Boolean Networks](https://arxiv.org/abs/1706.04072)
+**E. Weiss**, M. Margaliot — *IEEE Transactions on Automatic Control, 2019*
+`Boolean networks` `observability` `polynomial-time algorithm`
 
-**A Generalization of Automated Planning Using Dynamically Estimated Action Models**
-**E. Weiss**
-*Doctoral Consortium, ICAPS 2022* · [Paper](https://icaps22.icaps-conference.org/dc/ICAPS_2022_paper_364.pdf) · [Video](https://www.youtube.com/watch?v=J3JKlX8wuVg) · [Poster](https://drive.google.com/file/d/1s7GILnfExakbWpf14AZeTjc9Quu92Gis/view?usp=sharing)
-
-## 2021
-
-**A Generalization of Linear Positive Systems with Applications to Nonlinear Systems: Invariant Sets and the Poincaré–Bendixson Property**
-**E. Weiss**, M. Margaliot
-*Automatica*
-
-**Is My System of ODEs k-Cooperative?**
-**E. Weiss**, M. Margaliot
-*IEEE Control Systems Letters*
-
-## 2019
-
-**Output Selection and Observer Design for Boolean Control Networks: A Sub-Optimal Polynomial-Complexity Algorithm**
-**E. Weiss**, M. Margaliot
-*IEEE Control Systems Letters*
-
-**A Polynomial-Time Algorithm for Solving the Minimal Observability Problem in Conjunctive Boolean Networks**
-**E. Weiss**, M. Margaliot
-*IEEE Transactions on Automatic Control*
+[Minimal Controllability of Conjunctive Boolean Networks is NP-Complete](https://arxiv.org/abs/1704.07291)
+**E. Weiss**, M. Margaliot, G. Even — *Automatica, 2018*
+`Boolean networks` `controllability` `NP-completeness`

@@ -97,6 +97,10 @@ menu:
       name: News
       url: /news/
       weight: 10
+    - identifier: publications
+      name: Publications
+      url: /publications/
+      weight: 15
     - identifier: talks
       name: Talks
       url: /talks/
