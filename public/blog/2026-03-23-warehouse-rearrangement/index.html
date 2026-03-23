@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What if warehouse robots planned around the packages, not themselves? | Eyal Weiss — Researcher</title>
+<meta name="keywords" content="">
+<meta name="description" content="A simple change in perspective — planning paths for items instead of robots — leads to provably optimal warehouse rearrangement and up to 2x faster completion times.">
+<meta name="author" content="Eyal Weiss">
+<link rel="canonical" href="http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/">
+  <meta property="og:site_name" content="Eyal Weiss — Researcher">
+  <meta property="og:title" content="What if warehouse robots planned around the packages, not themselves?">
+  <meta property="og:description" content="A simple change in perspective — planning paths for items instead of robots — leads to provably optimal warehouse rearrangement and up to 2x faster completion times.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-03-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-23T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What if warehouse robots planned around the packages, not themselves?">
+  <meta name="twitter:description" content="A simple change in perspective — planning paths for items instead of robots — leads to provably optimal warehouse rearrangement and up to 2x faster completion times.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "http://localhost:1313/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What if warehouse robots planned around the packages, not themselves?",
+      "item": "http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What if warehouse robots planned around the packages, not themselves?",
+  "name": "What if warehouse robots planned around the packages, not themselves?",
+  "description": "A simple change in perspective — planning paths for items instead of robots — leads to provably optimal warehouse rearrangement and up to 2x faster completion times.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Picture a warehouse floor. Dozens of robots scurry between shelves, picking up packages and delivering them to new locations. The warehouse layout needs to change — maybe seasonal inventory is rotating, or a new batch of products just arrived and the shelves need reshuffling. Every robot must coordinate with every other robot to avoid collisions, and the goal is simple: finish the rearrangement as fast as possible.\nThis is the Multi-Agent Warehouse Rearrangement (MAWR) problem, and it turns out that the way you think about it determines how well you can solve it.\nThe natural approach (and its limitation) The intuitive way to tackle this is agent-centric: assign each robot a task (“Robot 3, take the red package from shelf A to shelf D”), plan a collision-free path for each robot, and send them on their way. This is essentially what existing methods do — they treat it as a variant of multi-agent path finding, where the robots are the main characters and the packages are along for the ride.\nThis works, and it’s fast. But it leaves performance on the table. Why? Because once you assign a task to a specific robot, you’ve locked in a commitment. Robot 3 must carry the red package the entire way, even if Robot 7 happens to be passing right by the halfway point and could easily take over.\nFlipping the script In our recent paper (which received the Best Paper Award at SoCS 2025), my co-authors Yaakov Sherma, Oren Salzman, and I proposed a surprisingly simple shift in perspective: plan for the packages, not the robots.\nInstead of asking “where should each robot go?”, we ask “how should each package move?”\nFirst, we compute optimal, collision-free paths for the packages themselves — as if the packages were the agents. Then, we figure out which robots should execute each movement using a network-flow algorithm. If some package movement can’t be carried out by any available robot, we feed that information back and adjust the package paths accordingly.\nThis is the core of our algorithm, NAT-CBS (Non-Atomic Task Conflict-Based Search).\nWhy “non-atomic” matters The word non-atomic captures the key advantage. In traditional approaches, a task is atomic: one robot picks up a package and carries it all the way to its destination. In our approach, tasks are non-atomic: Robot 1 might carry a package halfway across the warehouse, set it down, and Robot 2 — who happens to be nearby — picks it up and finishes the job.\nThis isn’t just a theoretical nicety. Consider a small example: a 3×3 grid with four colored packages and two robots. The packages need to be shuffled to new positions. An agent-centric approach finds a solution in 11 timesteps. Our obstacle-centric approach finds the optimal solution in just 8 timesteps — a 27% improvement — precisely because it allows robots to hand off packages mid-transit.\nDoes it actually work? We tested NAT-CBS against the state-of-the-art method (MAPF-DECOMP) across hundreds of randomly generated warehouse instances on 8×8 and 15×20 grid maps.\nThe results were striking. NAT-CBS consistently produces better plans — in many instances, the competing method’s makespan was 1.5× to 3× worse than optimal. The gap grows with problem complexity: the more packages that need moving, the more the agent-centric approach struggles with suboptimal task assignments, while the obstacle-centric view continues to find efficient coordinated solutions.\nThe trade-off is runtime. NAT-CBS is significantly slower because it’s solving a harder problem — it guarantees optimality rather than settling for a quick heuristic answer. Think of it as the difference between finding a route through traffic versus finding the fastest route. The latter takes more computation but can save significant time in execution.\nThe bigger picture What I find most interesting about this work is the meta-lesson: sometimes the best way to solve a coordination problem is to stop focusing on the actors and start focusing on what needs to happen. The robots are interchangeable — any robot can move any package. By planning around the packages (the things that actually need to reach specific locations), we unlock a more natural and efficient way to coordinate the whole system.\nThis kind of perspective shift — from who does the work to what work needs doing — likely extends beyond warehouses to other multi-agent coordination domains. And with growing interest in bounded-suboptimal variants that trade a small amount of optimality for dramatically faster computation, practical deployment may not be far off.\nY. Sherma, E. Weiss, O. Salzman. “From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem.” SoCS 2025. Paper · Code\n",
+  "wordCount" : "768",
+  "inLanguage": "en",
+  "datePublished": "2026-03-23T00:00:00Z",
+  "dateModified": "2026-03-23T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Eyal Weiss"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Eyal Weiss — Researcher",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Eyal Weiss — Researcher (Alt + H)">Eyal Weiss — Researcher</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/news/" title="News">
+                    <span>News</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/talks/" title="Talks">
+                    <span>Talks</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/software/" title="Software">
+                    <span>Software</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/open-access/" title="Open Access">
+                    <span>Open Access</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/toolbox/" title="Grad Toolbox">
+                    <span>Grad Toolbox</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/teaching/" title="Teaching">
+                    <span>Teaching</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      What if warehouse robots planned around the packages, not themselves?
+    </h1>
+    <div class="post-meta"><span title='2026-03-23 00:00:00 +0000 UTC'>March 23, 2026</span>&nbsp;·&nbsp;<span>Eyal Weiss</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#the-natural-approach-and-its-limitation" aria-label="The natural approach (and its limitation)">The natural approach (and its limitation)</a></li>
+                <li>
+                    <a href="#flipping-the-script" aria-label="Flipping the script">Flipping the script</a></li>
+                <li>
+                    <a href="#why-non-atomic-matters" aria-label="Why &ldquo;non-atomic&rdquo; matters">Why &ldquo;non-atomic&rdquo; matters</a></li>
+                <li>
+                    <a href="#does-it-actually-work" aria-label="Does it actually work?">Does it actually work?</a></li>
+                <li>
+                    <a href="#the-bigger-picture" aria-label="The bigger picture">The bigger picture</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Picture a warehouse floor. Dozens of robots scurry between shelves, picking up packages and delivering them to new locations. The warehouse layout needs to change — maybe seasonal inventory is rotating, or a new batch of products just arrived and the shelves need reshuffling. Every robot must coordinate with every other robot to avoid collisions, and the goal is simple: finish the rearrangement as fast as possible.</p>
+<p>This is the <strong>Multi-Agent Warehouse Rearrangement (MAWR)</strong> problem, and it turns out that the way you <em>think</em> about it determines how well you can solve it.</p>
+<h2 id="the-natural-approach-and-its-limitation">The natural approach (and its limitation)<a hidden class="anchor" aria-hidden="true" href="#the-natural-approach-and-its-limitation">#</a></h2>
+<p>The intuitive way to tackle this is <strong>agent-centric</strong>: assign each robot a task (&ldquo;Robot 3, take the red package from shelf A to shelf D&rdquo;), plan a collision-free path for each robot, and send them on their way. This is essentially what existing methods do — they treat it as a variant of multi-agent path finding, where the robots are the main characters and the packages are along for the ride.</p>
+<p>This works, and it&rsquo;s fast. But it leaves performance on the table. Why? Because once you assign a task to a specific robot, you&rsquo;ve locked in a commitment. Robot 3 <em>must</em> carry the red package the entire way, even if Robot 7 happens to be passing right by the halfway point and could easily take over.</p>
+<h2 id="flipping-the-script">Flipping the script<a hidden class="anchor" aria-hidden="true" href="#flipping-the-script">#</a></h2>
+<p>In our <a href="https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140">recent paper</a> (which received the <strong>Best Paper Award at SoCS 2025</strong>), my co-authors Yaakov Sherma, Oren Salzman, and I proposed a surprisingly simple shift in perspective: <strong>plan for the packages, not the robots.</strong></p>
+<p>Instead of asking <em>&ldquo;where should each robot go?&rdquo;</em>, we ask <em>&ldquo;how should each package move?&rdquo;</em></p>
+<p>First, we compute optimal, collision-free paths for the packages themselves — as if the packages were the agents. Then, we figure out which robots should execute each movement using a network-flow algorithm. If some package movement can&rsquo;t be carried out by any available robot, we feed that information back and adjust the package paths accordingly.</p>
+<p>This is the core of our algorithm, <strong>NAT-CBS</strong> (Non-Atomic Task Conflict-Based Search).</p>
+<p><img alt="Agent-centric vs Obstacle-centric planning" loading="lazy" src="/images/agent-vs-obstacle-centric.svg"></p>
+<h2 id="why-non-atomic-matters">Why &ldquo;non-atomic&rdquo; matters<a hidden class="anchor" aria-hidden="true" href="#why-non-atomic-matters">#</a></h2>
+<p>The word <em>non-atomic</em> captures the key advantage. In traditional approaches, a task is <strong>atomic</strong>: one robot picks up a package and carries it all the way to its destination. In our approach, tasks are <strong>non-atomic</strong>: Robot 1 might carry a package halfway across the warehouse, set it down, and Robot 2 — who happens to be nearby — picks it up and finishes the job.</p>
+<p>This isn&rsquo;t just a theoretical nicety. Consider a small example: a 3×3 grid with four colored packages and two robots. The packages need to be shuffled to new positions. An agent-centric approach finds a solution in 11 timesteps. Our obstacle-centric approach finds the optimal solution in just 8 timesteps — a 27% improvement — precisely because it allows robots to hand off packages mid-transit.</p>
+<h2 id="does-it-actually-work">Does it actually work?<a hidden class="anchor" aria-hidden="true" href="#does-it-actually-work">#</a></h2>
+<p>We tested NAT-CBS against the state-of-the-art method (MAPF-DECOMP) across hundreds of randomly generated warehouse instances on 8×8 and 15×20 grid maps.</p>
+<p>The results were striking. NAT-CBS consistently produces better plans — in many instances, the competing method&rsquo;s makespan was <strong>1.5× to 3× worse</strong> than optimal. The gap grows with problem complexity: the more packages that need moving, the more the agent-centric approach struggles with suboptimal task assignments, while the obstacle-centric view continues to find efficient coordinated solutions.</p>
+<p>The trade-off is runtime. NAT-CBS is significantly slower because it&rsquo;s solving a harder problem — it <em>guarantees</em> optimality rather than settling for a quick heuristic answer. Think of it as the difference between finding <em>a</em> route through traffic versus finding <em>the fastest</em> route. The latter takes more computation but can save significant time in execution.</p>
+<h2 id="the-bigger-picture">The bigger picture<a hidden class="anchor" aria-hidden="true" href="#the-bigger-picture">#</a></h2>
+<p>What I find most interesting about this work is the meta-lesson: sometimes the best way to solve a coordination problem is to stop focusing on the actors and start focusing on what needs to happen. The robots are interchangeable — any robot can move any package. By planning around the packages (the things that <em>actually</em> need to reach specific locations), we unlock a more natural and efficient way to coordinate the whole system.</p>
+<p>This kind of perspective shift — from who does the work to what work needs doing — likely extends beyond warehouses to other multi-agent coordination domains. And with growing interest in bounded-suboptimal variants that trade a small amount of optimality for dramatically faster computation, practical deployment may not be far off.</p>
+<p><em>Y. Sherma, E. Weiss, O. Salzman. &ldquo;From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem.&rdquo; SoCS 2025. <a href="https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140">Paper</a> · <a href="https://github.com/CRL-Technion/wh-rearrangement">Code</a></em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/blog/2025-12-31-motion-planning-robots/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Motion planning time for robots is almost immediate</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Eyal Weiss — Researcher</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content" style="display: flex; gap: 2em; align-items: flex-start;">
+        <div style="flex: 1;">
+            {{ .Content | markdownify }}
+        </div>
+        <img src="/profile.jpg" alt="Eyal Weiss" style="width: 200px; border-radius: 8px; flex-shrink: 0;">
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}

@@ -1,0 +1,126 @@
+baseURL: "https://eyal-weiss.github.io/"
+languageCode: en-us
+title: "Eyal Weiss — Researcher"
+theme: PaperMod
+
+pagination:
+  pagerSize: 10
+
+params:
+  env: production
+  description: "Postdoctoral Scholar in AI & Robotics — Technion"
+  author: Eyal Weiss
+
+  defaultTheme: auto
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+
+  homeInfoParams:
+    Title: "Eyal Weiss"
+    Content: >
+      Postdoctoral scholar | AI & Robotics | Planning, Search & Optimization
+
+      Computer Science Faculty, Technion — Israel Institute of Technology
+
+
+      **What I'm passionate about:** AI and robotics, particularly through the lens of planning, search and control
+
+
+      I am a postdoc at the [Computational Robotics Lab (CRL)](https://crl.cs.technion.ac.il/)
+      led by [**Prof. Oren Salzman**](https://orensalzman.com/), in the
+      [CS Faculty at the Technion](https://cs.technion.ac.il/).
+      My current research spans Search, AI Planning, Motion Planning for robotics, and Combinatorial Optimization.
+
+
+      Prior to joining the CRL I had the privilege to conduct my PhD under the supervision of
+      [**Prof. Gal A. Kaminka**](http://u.cs.biu.ac.il/~galk/), affiliated with the
+      [MAVERICK](http://u.cs.biu.ac.il/~galk/maverick/) research group, in the
+      [CS department at BIU](https://www.cs.biu.ac.il/en).
+      My research was, and partially still is, devoted to generalizing automated planning
+      with dynamically estimated action models, where we combined tools from AI planning,
+      graph theory and combinatorial optimization, to endow agents with enhanced planning
+      capabilities in challenging (non-classical) setups.
+
+
+      Previously, I earned my BSc and MSc in Electrical Engineering at Tel Aviv University,
+      where I was fortunate to work with
+      [**Prof. Michael Margaliot**](https://sites.google.com/view/michael-margaliot-homepage/home),
+      in the [EE school at TAU](https://en-engineering.tau.ac.il/School-of-Electrical-Engineering/main),
+      on problems in the fields of control theory and dynamical systems.
+
+
+      My complete CV can be found
+      [here](https://drive.google.com/file/d/13E0D4cbg5zXMurimfOWb6-o5LCxpWSwW/view?usp=sharing).
+
+  socialIcons:
+    - name: email
+      url: "mailto:eweiss@campus.technion.ac.il"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en"
+    - name: github
+      url: "https://github.com/eyal-weiss"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/eyal-weiss-ba3b3383"
+    - name: youtube
+      url: "https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw/playlists"
+    - name: orcid
+      url: "https://orcid.org/0000-0003-0508-6213"
+    - name: x
+      url: "https://x.com/eyal__weiss"
+
+  assets:
+    favicon: "/favicon.ico"
+
+  cover:
+    hiddenInList: true
+    hiddenInSingle: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - identifier: news
+      name: News
+      url: /news/
+      weight: 10
+    - identifier: talks
+      name: Talks
+      url: /talks/
+      weight: 20
+    - identifier: software
+      name: Software
+      url: /software/
+      weight: 30
+    - identifier: open-access
+      name: Open Access
+      url: /open-access/
+      weight: 40
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 60
+    - identifier: toolbox
+      name: Grad Toolbox
+      url: /toolbox/
+      weight: 70
+    - identifier: teaching
+      name: Teaching
+      url: /teaching/
+      weight: 80
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

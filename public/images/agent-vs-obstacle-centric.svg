@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, sans-serif">
+  <defs>
+    <marker id="ab" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#3b82f6"/>
+    </marker>
+    <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Overall background -->
+  <rect width="720" height="460" rx="12" fill="#ffffff"/>
+
+  <!-- ===== TOP PANEL: Agent-Centric ===== -->
+  <rect x="12" y="12" width="696" height="190" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="350" y="36" text-anchor="middle" font-size="15" font-weight="700" fill="#374151" letter-spacing="0.3">Agent-centric</text>
+  <text x="350" y="54" text-anchor="middle" font-size="11.5" fill="#9ca3af">Each robot is assigned a package and carries it end-to-end</text>
+
+  <!-- Long arrow: R1 carries package all the way -->
+  <path d="M 135 100 C 250 68, 450 68, 548 100" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="7,4" marker-end="url(#ab)"/>
+  <text x="340" y="70" text-anchor="middle" font-size="10.5" fill="#3b82f6" font-weight="600">R1 carries the package the entire way</text>
+
+  <!-- Warehouse aisle: 6 cells -->
+  <rect x="60"  y="100" width="72" height="60" rx="5" fill="#e0ecff" stroke="#a8c4f0" stroke-width="1"/>
+  <rect x="152" y="100" width="72" height="60" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="244" y="100" width="72" height="60" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="336" y="100" width="72" height="60" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="428" y="100" width="72" height="60" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="520" y="100" width="72" height="60" rx="5" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- R1 (blue) at cell 0 -->
+  <circle cx="96" cy="130" r="20" fill="#3b82f6"/>
+  <text x="96" y="135" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">R1</text>
+
+  <!-- Package being carried by R1 -->
+  <rect x="114" y="113" width="18" height="18" rx="3" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+
+  <!-- R2 (green) at cell 4, faded/idle -->
+  <circle cx="464" cy="130" r="16" fill="#22c55e" opacity="0.3"/>
+  <text x="464" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" opacity="0.5">R2</text>
+  <text x="464" y="175" text-anchor="middle" font-size="10" fill="#b0b0b0" font-style="italic">idle</text>
+
+  <!-- Destination marker -->
+  <rect x="543" y="115" width="26" height="26" rx="4" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="556" y="170" text-anchor="middle" font-size="10" fill="#9ca3af">goal</text>
+
+
+  <!-- ===== BOTTOM PANEL: Obstacle-Centric ===== -->
+  <rect x="12" y="228" width="696" height="222" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="350" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af" letter-spacing="0.3">Obstacle-centric</text>
+  <text x="350" y="268" text-anchor="middle" font-size="11.5" fill="#60a5fa">Plan the package path first. Any robot can help move it.</text>
+  <text x="350" y="282" text-anchor="middle" font-size="11.5" fill="#60a5fa">Find the best way to use the robots to move the package along the planned path.</text>
+
+  <!-- Arrow: R1 carries first segment -->
+  <path d="M 135 315 C 185 293, 230 293, 268 311" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="185" y="295" text-anchor="middle" font-size="10" fill="#3b82f6" font-weight="600">R1</text>
+
+  <!-- Arrow: R2 approaches handoff -->
+  <path d="M 446 325 C 400 303, 340 303, 300 315" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+
+  <!-- Arrow: R2 carries second segment to goal -->
+  <path d="M 298 315 C 370 293, 470 293, 548 323" fill="none" stroke="#22c55e" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="500" y="301" text-anchor="middle" font-size="10" fill="#16a34a" font-weight="600">R2 takes over</text>
+
+  <!-- Warehouse aisle: 6 cells -->
+  <rect x="60"  y="325" width="72" height="60" rx="5" fill="#e0ecff" stroke="#a8c4f0" stroke-width="1"/>
+  <rect x="152" y="325" width="72" height="60" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="244" y="325" width="72" height="60" rx="5" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+  <rect x="336" y="325" width="72" height="60" rx="5" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="428" y="325" width="72" height="60" rx="5" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <rect x="520" y="325" width="72" height="60" rx="5" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- R1 (blue) at cell 0 -->
+  <circle cx="96" cy="355" r="20" fill="#3b82f6"/>
+  <text x="96" y="360" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">R1</text>
+
+  <!-- Package being carried by R1 -->
+  <rect x="114" y="338" width="18" height="18" rx="3" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+
+  <!-- Handoff point at cell 2 -->
+  <circle cx="280" cy="355" r="14" fill="#fff" stroke="#8b5cf6" stroke-width="2.5"/>
+  <rect x="273" y="348" width="14" height="14" rx="2" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+  <text x="280" y="405" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7c3aed">handoff</text>
+
+  <!-- R2 (green) at cell 4 — active -->
+  <circle cx="464" cy="355" r="18" fill="#22c55e"/>
+  <text x="464" y="360" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">R2</text>
+
+  <!-- Destination marker -->
+  <rect x="543" y="340" width="26" height="26" rx="4" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="556" y="400" text-anchor="middle" font-size="10" fill="#9ca3af">goal</text>
+
+  <!-- R1 freed up — dashed arrow going off to other work -->
+  <path d="M 96 375 C 96 405, 130 420, 175 415" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#ab)"/>
+  <text x="170" y="430" font-size="9.5" fill="#6b7280" font-style="italic">R1 free for other tasks</text>
+</svg>

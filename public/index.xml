@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Eyal Weiss — Researcher</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Eyal Weiss — Researcher</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What if warehouse robots planned around the packages, not themselves?</title>
+      <link>http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2026-03-23-warehouse-rearrangement/</guid>
+      <description>A simple change in perspective — planning paths for items instead of robots — leads to provably optimal warehouse rearrangement and up to 2x faster completion times.</description>
+    </item>
+    <item>
+      <title>Motion planning time for robots is almost immediate</title>
+      <link>http://localhost:1313/blog/2025-12-31-motion-planning-robots/</link>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2025-12-31-motion-planning-robots/</guid>
+      <description>&lt;p&gt;Have you ever watched a robot try to perform a task in the real world—perhaps a robotic arm trying to grab a specific object out of a cluttered bin, or a humanoid robot trying to navigate a messy room? If you have, you might have noticed a slight hesitation. The robot pauses, computes, moves a little, pauses again, and then commits to the action. That pause isn&amp;rsquo;t uncertainty; it&amp;rsquo;s intense calculation. The robot is desperately trying to figure out how to get from Point A to Point B without smashing its elbow into a table or colliding with a human.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>About Eyal Weiss</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>Contact</description>
+    </item>
+    <item>
+      <title>Graduate Student Toolbox</title>
+      <link>http://localhost:1313/toolbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolbox/</guid>
+      <description>Graduate Student Toolbox</description>
+    </item>
+    <item>
+      <title>News</title>
+      <link>http://localhost:1313/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/</guid>
+      <description>News</description>
+    </item>
+    <item>
+      <title>Open Access</title>
+      <link>http://localhost:1313/open-access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/open-access/</guid>
+      <description>Open Access</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/</guid>
+      <description>Publications</description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/software/</guid>
+      <description>Software</description>
+    </item>
+    <item>
+      <title>Talks</title>
+      <link>http://localhost:1313/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/talks/</guid>
+      <description>Talks</description>
+    </item>
+    <item>
+      <title>Teaching</title>
+      <link>http://localhost:1313/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/teaching/</guid>
+      <description>Teaching</description>
+    </item>
+  </channel>
+</rss>
