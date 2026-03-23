@@ -22,9 +22,11 @@ params:
   homeInfoParams:
     Title: "Eyal Weiss"
     Content: >
-      Postdoctoral scholar | AI & Robotics | Planning, Search & Optimization
+      *Postdoctoral scholar | AI & Robotics | Planning, Search & Optimization*
+      <br>*Computer Science Faculty, Technion — Israel Institute of Technology*
 
-      Computer Science Faculty, Technion — Israel Institute of Technology
+
+      ---
 
 
       **What I'm passionate about:** AI and robotics, particularly through the lens of planning, search and control
@@ -34,6 +36,9 @@ params:
       led by [**Prof. Oren Salzman**](https://orensalzman.com/), in the
       [CS Faculty at the Technion](https://cs.technion.ac.il/).
       My current research spans Search, AI Planning, Motion Planning for robotics, and Combinatorial Optimization.
+
+
+      ---
 
 
       Prior to joining the CRL I had the privilege to conduct my PhD under the supervision of
@@ -46,6 +51,9 @@ params:
       capabilities in challenging (non-classical) setups.
 
 
+      ---
+
+
       Previously, I earned my BSc and MSc in Electrical Engineering at Tel Aviv University,
       where I was fortunate to work with
       [**Prof. Michael Margaliot**](https://sites.google.com/view/michael-margaliot-homepage/home),
@@ -53,8 +61,7 @@ params:
       on problems in the fields of control theory and dynamical systems.
 
 
-      My complete CV can be found
-      [here](https://drive.google.com/file/d/13E0D4cbg5zXMurimfOWb6-o5LCxpWSwW/view?usp=sharing).
+      📄 [My complete CV](https://drive.google.com/file/d/13E0D4cbg5zXMurimfOWb6-o5LCxpWSwW/view?usp=sharing)
 
   socialIcons:
     - name: email
