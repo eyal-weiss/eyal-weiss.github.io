@@ -3,6 +3,10 @@ languageCode: en-us
 title: "Eyal Weiss — Researcher"
 theme: PaperMod
 
+services:
+  googleAnalytics:
+    id: G-DPM1GFT72W
+
 pagination:
   pagerSize: 10
 
