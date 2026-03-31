@@ -2,6 +2,7 @@ baseURL: "https://eyal-weiss.github.io/"
 languageCode: en-us
 title: "Eyal Weiss — Researcher"
 theme: PaperMod
+enableRobotsTXT: true
 
 services:
   googleAnalytics:
@@ -14,6 +15,10 @@ params:
   env: production
   description: "Postdoctoral Scholar in AI & Robotics — Technion"
   author: Eyal Weiss
+  images: ["/profile.jpg"]
+
+  social:
+    twitter: "eyal__weiss"
 
   defaultTheme: auto
   ShowReadingTime: false
