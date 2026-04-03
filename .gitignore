@@ -1,1 +1,4 @@
 public/
+future_plans.md
+*.pdf
+!static/cv.pdf

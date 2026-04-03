@@ -91,6 +91,9 @@ params:
     - name: x
       url: "https://x.com/eyal__weiss"
 
+  footer:
+    text: "[Accessibility Statement](/accessibility/)"
+
   assets:
     favicon: "/favicon.ico"
 
