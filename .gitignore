@@ -1,5 +1,5 @@
 public/
-future_plans.md
+future_plans_personal_website.md
 *.pdf
 !static/cv.pdf
 !static/companions/*.pdf
