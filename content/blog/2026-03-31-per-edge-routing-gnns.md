@@ -38,7 +38,7 @@ Based on this cost, each neighbor's message gets **soft-routed** into one of two
 
 A learned **gate** then decides, for each node, how much to trust each channel versus its own features. On a heterophilous graph, the model can learn to down-weight the concordant channel (few useful same-class neighbors) and up-weight its own features or the separately-processed discordant signal.
 
-![Toy example](/blog-csna-toy-example.png)
+![Toy example](/images/blog/csna-toy-example.png)
 
 ## Where It Worked — and Where It Didn't
 

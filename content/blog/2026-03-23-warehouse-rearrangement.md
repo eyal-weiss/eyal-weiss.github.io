@@ -25,7 +25,7 @@ First, we compute optimal, collision-free paths for the packages themselves — 
 
 This is the core of our algorithm, **NAT-CBS** (Non-Atomic Task Conflict-Based Search).
 
-![Agent-centric vs Obstacle-centric planning](/images/agent-vs-obstacle-centric.svg)
+![Agent-centric vs Obstacle-centric planning](/images/blog/agent-vs-obstacle-centric.svg)
 
 ## Why "non-atomic" matters
 

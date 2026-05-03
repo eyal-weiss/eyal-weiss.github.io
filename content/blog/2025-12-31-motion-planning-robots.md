@@ -30,7 +30,7 @@ The breakthrough by Plancher, Wilcox, and Manchester utilizes something differen
 
 The researchers found a way to apply this "super-scanner" approach to the robot's safety checks. Modern CPUs have special features (called SIMD instructions) designed to do this kind of math, but they are notoriously difficult to apply to the irregular, messy problems of robot motion planning. The brilliance of this paper lies in reorganizing the math so the robot's computer isn't asking, "Is this one point safe?" It's asking, "Are these 16 points safe?" and getting the answer for all of them at the exact same instant.
 
-![Before vs After: Checking 1 possibility at a time vs checking 16+ possibilities at once](/blog-motion-planning.jpg)
+![Before vs After: Checking 1 possibility at a time vs checking 16+ possibilities at once](/images/blog/motion-planning.jpg)
 
 ## The Implications: Robots That React in Real-Time
 

@@ -15,7 +15,7 @@ params:
   env: production
   description: "Postdoctoral Scholar in AI & Robotics — Technion"
   author: Eyal Weiss
-  images: ["/profile.jpg"]
+  images: ["/images/profile.jpg"]
 
   social:
     twitter: "eyal__weiss"
