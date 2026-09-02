@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Site Overview
 
-Personal academic website for Eyal Weiss (postdoctoral scholar, AI & Robotics, Technion). Built with Hugo and the PaperMod theme, deployed to GitHub Pages via GitHub Actions.
+Personal academic website for Eyal Weiss (postdoctoral scholar, AI & Robotics, Robotics Institute, Carnegie Mellon University). Built with Hugo and the PaperMod theme, deployed to GitHub Pages via GitHub Actions.
 
 ## Build & Development
 

@@ -6,9 +6,9 @@ summary: "Contact"
 ShowToc: false
 ---
 
-**Email:** [eweiss@campus.technion.ac.il](mailto:eweiss@campus.technion.ac.il)
+**Email:** [eyalw@andrew.cmu.edu](mailto:eyalw@andrew.cmu.edu)
 
-**Office:** Taub Building, Room 744, Technion, Haifa 3200003, Israel
+**Office:** Robotics Institute, Carnegie Mellon University, 5000 Forbes Avenue, Pittsburgh, PA 15213, USA
 
 ---
 

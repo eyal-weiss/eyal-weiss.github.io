@@ -8,6 +8,8 @@ ShowToc: false
 
 **News: announcements and ongoing projects**
 
+- Started a new position as a postdoctoral researcher at the [Robotics Institute](https://www.ri.cmu.edu/), Carnegie Mellon University, affiliated with the [Search-based Planning Laboratory (SBPL)](https://www.ri.cmu.edu/robotics-groups/search-based-planning-laboratory/) and the [ARCS Lab](https://arcs-group.github.io/) 🎉
+
 - Working on a very exciting research project that analyzes LLMs using... I'll share once it's ready :)
 
 - Submitted my first paper in the field of Graph Neural Networks (technique inspired by serach ideas).. check out the blog.

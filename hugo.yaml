@@ -13,7 +13,7 @@ pagination:
 
 params:
   env: production
-  description: "Postdoctoral Scholar in AI & Robotics — Technion"
+  description: "Postdoctoral Scholar in AI & Robotics — Carnegie Mellon University"
   author: Eyal Weiss
   images: ["/images/profile.jpg"]
 
@@ -32,7 +32,7 @@ params:
     Title: "Eyal Weiss"
     Content: >
       *Postdoctoral scholar | AI & Robotics | Planning, Search & Optimization*
-      <br>*Computer Science Faculty, Technion — Israel Institute of Technology*
+      <br>*Robotics Institute, Carnegie Mellon University*
 
 
       ---
@@ -44,16 +44,28 @@ params:
       <br>
 
 
-      I am a postdoc at the [Computational Robotics Lab (CRL)](https://crl.cs.technion.ac.il/)
-      led by [**Prof. Oren Salzman**](https://orensalzman.com/), in the
-      [CS Faculty at the Technion](https://cs.technion.ac.il/).
+      I am a postdoc at the [Robotics Institute](https://www.ri.cmu.edu/) at
+      Carnegie Mellon University, affiliated with the
+      [Search-based Planning Laboratory (SBPL)](https://www.ri.cmu.edu/robotics-groups/search-based-planning-laboratory/)
+      led by [**Prof. Maxim Likhachev**](https://www.cs.cmu.edu/~maxim/) and the
+      [ARCS Lab](https://arcs-group.github.io/) led by
+      [**Prof. Jiaoyang Li**](https://jiaoyangli.me/).
       My current research spans Search, AI Planning, Motion Planning for robotics, and Combinatorial Optimization.
 
 
       ---
 
 
-      Prior to joining the CRL I had the privilege to conduct my PhD under the supervision of
+      Prior to joining CMU I was a postdoc at the
+      [Computational Robotics Lab (CRL)](https://crl.cs.technion.ac.il/)
+      led by [**Prof. Oren Salzman**](https://orensalzman.com/), in the
+      [CS Faculty at the Technion](https://cs.technion.ac.il/).
+
+
+      ---
+
+
+      I had the privilege to conduct my PhD under the supervision of
       [**Prof. Gal A. Kaminka**](http://u.cs.biu.ac.il/~galk/), affiliated with the
       [MAVERICK](http://u.cs.biu.ac.il/~galk/maverick/) research group, in the
       [CS department at BIU](https://www.cs.biu.ac.il/en).
@@ -77,7 +89,7 @@ params:
 
   socialIcons:
     - name: email
-      url: "mailto:eweiss@campus.technion.ac.il"
+      url: "mailto:eyalw@andrew.cmu.edu"
     - name: googlescholar
       url: "https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en"
     - name: github
