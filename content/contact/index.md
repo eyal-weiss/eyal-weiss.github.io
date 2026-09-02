@@ -8,7 +8,7 @@ ShowToc: false
 
 **Email:** [eyalw@andrew.cmu.edu](mailto:eyalw@andrew.cmu.edu)
 
-**Office:** Robotics Institute, Carnegie Mellon University, 5000 Forbes Avenue, Pittsburgh, PA 15213, USA
+**Office:** Newell-Simon Hall, Room 1615, Robotics Institute, Carnegie Mellon University, 5000 Forbes Avenue, Pittsburgh, PA 15213, USA
 
 ---
 
