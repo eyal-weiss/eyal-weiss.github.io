@@ -1,0 +1,47 @@
+/* Home page hero: photo beside name and tagline; stacks on narrow screens */
+.home-hero {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 6px;
+}
+.home-hero-photo {
+    flex: 0 0 auto;
+    width: 190px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+.home-hero-text h1 {
+    margin: 0 0 6px 0;
+    font-size: 2.2em;
+    line-height: 1.15;
+}
+.home-hero-subtitle {
+    color: var(--secondary);
+    line-height: 1.5;
+}
+.home-hero-subtitle p {
+    margin: 0;
+}
+@media screen and (max-width: 600px) {
+    .home-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 14px;
+    }
+    .home-hero-photo {
+        width: 150px;
+    }
+    .home-hero-text h1 {
+        font-size: 1.9em;
+    }
+}
+
+/* Section separators in the home bio: thin rules instead of the theme's tiny dots */
+.home-info .entry-content hr {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 20px 0;
+}

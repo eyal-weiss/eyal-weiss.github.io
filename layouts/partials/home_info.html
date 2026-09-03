@@ -1,12 +1,15 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
-    </header>
-    <div class="entry-content">
-        <div style="text-align: center; margin-bottom: 1.5em;">
-            <img src="/images/profile.jpg" alt="Eyal Weiss" style="width: 180px; border-radius: 8px;">
+    <div class="home-hero">
+        <img class="home-hero-photo" src="/images/profile.jpg" alt="Eyal Weiss" width="190" height="285">
+        <div class="home-hero-text">
+            <h1>{{ .Title | markdownify }}</h1>
+            {{- with .Subtitle }}
+            <div class="home-hero-subtitle">{{ . | markdownify }}</div>
+            {{- end }}
         </div>
+    </div>
+    <div class="entry-content">
         {{ .Content | markdownify }}
     </div>
     <footer class="entry-footer">

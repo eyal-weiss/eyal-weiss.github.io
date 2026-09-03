@@ -30,14 +30,10 @@ params:
 
   homeInfoParams:
     Title: "Eyal Weiss"
-    Content: >
+    Subtitle: >
       *Postdoctoral scholar | AI & Robotics | Planning, Search & Optimization*
       <br>*Robotics Institute, Carnegie Mellon University*
-
-
-      ---
-
-
+    Content: >
       **What I'm passionate about:** AI and robotics, particularly through the lens of planning, search and control.
 
 
