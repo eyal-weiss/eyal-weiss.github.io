@@ -44,5 +44,5 @@ Blog posts use the naming convention `content/blog/YYYY-MM-DD-slug.md`.
 ## Key Conventions
 
 - Goldmark renderer is set to `unsafe: true` — raw HTML is allowed in markdown content
-- The CV is served from `static/cv.pdf` (lowercase) — the home page links to `/cv.pdf`
+- The CV is served from `static/cv.pdf` (lowercase) — the home page links to `/cv.pdf`. Its LaTeX source is `cv/cv.tex`; rebuild with `latexmk -pdf` in `cv/` and copy the result to `static/cv.pdf` (see `cv/README.md`). `cv/old/` holds superseded versions kept for documentation only
 - Hugo outputs include HTML, RSS, and JSON (for search)

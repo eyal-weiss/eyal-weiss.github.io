@@ -1,0 +1,242 @@
+%% Eyal Weiss -- CV (Charter body, mixed-case bold headings, fixed date column)
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.8in,top=0.7in,bottom=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}            % body text
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fancyhdr,lastpage}
+\usepackage{fontawesome5}
+\usepackage{needspace}
+\usepackage[colorlinks,breaklinks,linkcolor=accent,urlcolor=accent,citecolor=accent]{hyperref}
+
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{dategray}{HTML}{555555}
+\definecolor{rulegray}{HTML}{999999}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\RaggedRight
+
+% Section headings: small caps sans, thin rule
+\titleformat{\section}{\rmfamily\bfseries\large\color{accent}}{}{0pt}{}[\vspace{-7pt}{\color{rulegray}\rule{\textwidth}{0.5pt}}]
+\titlespacing*{\section}{0pt}{11pt}{2pt}
+% keep a heading with at least a few lines of its section
+\let\origsection\section
+\renewcommand{\section}[1]{\Needspace*{5\baselineskip}\origsection{#1}}
+
+% Page footer
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\cfoot{\small\color{dategray}\thepage\ of \pageref*{LastPage}}
+
+% Entry with a right-aligned, fixed-width, top-aligned date column (never wraps into the text)
+\newlength{\datecol}\setlength{\datecol}{1.45in}
+\newlength{\bulw}\setlength{\bulw}{1.1em}
+\newcommand{\entry}[2]{\par\noindent
+  \parbox[t]{\dimexpr\textwidth-\datecol-1em\relax}{\RaggedRight #1}\hfill
+  \makebox[\datecol][r]{\color{dategray}#2}\par}
+% Bulleted rows with a date column
+\newenvironment{datedlist}{\par\begingroup\setlength{\parskip}{0pt}}{\endgroup\par}
+\newcommand{\bitem}[2]{\noindent
+  \makebox[\bulw][l]{\textbullet}%
+  \parbox[t]{\dimexpr\textwidth-\bulw-\datecol-1em\relax}{\RaggedRight #1}\hfill
+  \makebox[\datecol][r]{\color{dategray}#2}\par\vspace{2pt}}
+\newcommand{\blast}[2]{\bitem{#1}{#2}}
+% Plain bullet lists
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,parsep=0pt,topsep=2pt,label=\textbullet}
+\newlist{pubs}{enumerate}{1}
+\setlist[pubs]{leftmargin=1.9em,itemsep=3pt,parsep=0pt,topsep=2pt,label=\arabic*.}
+\newcommand{\me}{\textbf{E. Weiss}}
+\newcommand{\org}[1]{\textbf{#1}}
+\newcommand{\role}[1]{\textit{#1}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header
+{\rmfamily\bfseries\Huge Eyal Weiss}\hfill{\rmfamily\large\itshape\color{dategray}Curriculum Vitae}\\[2pt]
+{\rmfamily Postdoctoral Researcher, Robotics Institute, Carnegie Mellon University}\\[5pt]
+{\color{rulegray}\rule{\textwidth}{0.8pt}}\\[4pt]
+{\small
+\faEnvelope\ \href{mailto:eyalw@andrew.cmu.edu}{eyalw@andrew.cmu.edu}\quad
+\faGlobe\ \href{https://eyal-weiss.github.io}{eyal-weiss.github.io}\quad
+\faGraduationCap\ \href{https://scholar.google.com/citations?user=LO5sHMIAAAAJ}{Google Scholar}\quad
+\faOrcid\ \href{https://orcid.org/0000-0003-0508-6213}{0000-0003-0508-6213}\quad
+\faGithub\ \href{https://github.com/eyal-weiss}{eyal-weiss}
+}
+
+\section{Summary}
+Postdoctoral researcher in AI and robotics working on heuristic search, automated planning and motion planning, with a focus on planning with uncertain or expensive-to-compute action costs and on combinatorial optimization for multi-agent systems. 5 journal and 10 conference papers; SoCS 2025 Best Paper Award; Adams Fellow.
+
+\section{Research Interests}
+Artificial intelligence, robotics, heuristic search, automated planning, motion planning, multi-agent planning, combinatorial optimization; background in control theory and dynamical systems.
+
+\section{Research Positions}
+\entry{\org{\href{https://www.cmu.edu/}{Carnegie Mellon University}}, Pittsburgh, PA, USA\\
+\role{Postdoctoral Researcher}, \href{https://www.ri.cmu.edu/}{Robotics Institute}}{Aug 2026 -- present}
+\begin{itemize}
+  \item Topics: AI planning, robotics, heuristic search, motion planning, combinatorial optimization
+  \item Hosts: \href{https://www.cs.cmu.edu/~maxim/}{Prof. Maxim Likhachev} (\href{https://www.ri.cmu.edu/robotics-groups/search-based-planning-laboratory/}{Search-based Planning Laboratory}) and \href{https://jiaoyangli.me/}{Prof. Jiaoyang Li} (\href{https://arcs-group.github.io/}{ARCS Lab})
+\end{itemize}
+\vspace{4pt}
+\entry{\org{\href{https://www.technion.ac.il/en/}{Technion -- Israel Institute of Technology}}, Haifa, Israel\\
+\role{Postdoctoral Scholar}, \href{https://www.cs.technion.ac.il/}{Faculty of Computer Science}}{Oct 2024 -- Aug 2026}
+\begin{itemize}
+  \item Topics: AI planning, robotics, heuristic search, motion planning
+  \item Host: \href{https://www.orensalzman.com/}{Prof. Oren Salzman} (\href{https://crl.cs.technion.ac.il/}{Computational Robotics Lab})
+\end{itemize}
+\vspace{4pt}
+\entry{\org{\href{https://english.tau.ac.il/}{Tel Aviv University}}, Tel Aviv, Israel\\
+\role{Research Assistant}, \href{https://en-engineering.tau.ac.il/School-of-Electrical-Engineering/main}{School of Electrical Engineering}}{Apr 2018 -- Sep 2019}
+\begin{itemize}
+  \item Topics: control theory, dynamical systems, Boolean networks
+  \item Supervisor: \href{https://www.eng.tau.ac.il/~michaelm/}{Prof. Michael Margaliot}
+\end{itemize}
+
+\section{Education}
+\entry{\org{\href{https://www.biu.ac.il/en}{Bar-Ilan University}}, Ramat Gan, Israel\\
+\role{Ph.D.}, \href{https://www.cs.biu.ac.il/en}{Computer Science}}{Oct 2019 -- Sep 2024}
+\begin{itemize}
+  \item Thesis: \emph{Graph Search and Automated Planning with Multiple Cost Estimators}
+  \item Advisor: \href{https://u.cs.biu.ac.il/~kaminkg/}{Prof. Gal A. Kaminka}
+\end{itemize}
+\vspace{4pt}
+\entry{\org{\href{https://english.tau.ac.il/}{Tel Aviv University}}, Tel Aviv, Israel\\
+\role{M.Sc.}, \href{https://en-engineering.tau.ac.il/School-of-Electrical-Engineering/main}{Electrical Engineering}, \emph{Cum Laude}}{Mar 2018}
+\begin{itemize}
+  \item Thesis: \emph{Minimal Controllability and Minimal Observability of Conjunctive Boolean Networks}
+  \item Advisor: \href{https://www.eng.tau.ac.il/~michaelm/}{Prof. Michael Margaliot}
+\end{itemize}
+\vspace{4pt}
+\entry{\role{B.Sc.}, \href{https://en-engineering.tau.ac.il/School-of-Electrical-Engineering/main}{Electrical Engineering}, Tel Aviv University, \emph{Summa Cum Laude}}{Oct 2016}
+
+\section{Honours and Awards}
+\begin{datedlist}
+\bitem{\textbf{Best Paper Award}, International Symposium on Combinatorial Search (SoCS)}{2025}
+\bitem{\href{https://adams.academy.ac.il/}{Adams Fellowship} (Israel Academy of Sciences and Humanities) for outstanding doctoral students}{2022 -- 2024}
+\bitem{Excellence Scholarship for research students, Computer Science Department, Bar-Ilan University}{2023}
+\bitem{Milgat Hanasi (President's Scholarship) for excellent Ph.D. students}{2021 -- 2023}
+\bitem{Shlomo Shmeltzer Institute for Smart Transportation Scholarship}{2017}
+\bitem{Excellent Student Prize for M.Sc. students, Faculty of Engineering, Tel Aviv University}{2017}
+\bitem{Velger Prize for excellence in graduate studies in Systems and Control}{2017}
+\bitem{Final Prize for excellent students in Electrical Engineering}{2015}
+\bitem{Freescale Scholarship for excellent students in Electrical Engineering}{2014}
+\blast{Dean's Honors, every year of the B.Sc.}{2012 -- 2016}
+\end{datedlist}
+
+\section{Preprints}
+\begin{pubs}
+  \item H. Peer, \me, R. Alterovitz and O. Salzman, ``\href{https://arxiv.org/abs/2509.22085}{Generalizing Multi-Objective Search via Objective-Aggregation Functions}'', \emph{arXiv preprint} arXiv:2509.22085, 2025.
+\end{pubs}
+
+\section{Journal Publications}
+\begin{pubs}
+  \item \me\ and M. Margaliot, ``\href{https://doi.org/10.1016/j.automatica.2020.109358}{A Generalization of Linear Positive Systems with Applications to Nonlinear Systems: Invariant Sets and the Poincar\'e--Bendixson Property}'', \emph{Automatica}, 123, 109358, 2021.
+  \item \me\ and M. Margaliot, ``\href{https://doi.org/10.1109/LCSYS.2020.2999870}{Is My System of ODEs k-Cooperative?}'', \emph{IEEE Control Systems Letters}, 5(1):73--78, 2021.
+  \item \me\ and M. Margaliot, ``\href{https://doi.org/10.1109/TAC.2018.2882154}{A Polynomial-Time Algorithm for Solving the Minimal Observability Problem in Conjunctive Boolean Networks}'', \emph{IEEE Transactions on Automatic Control}, 64(7):2727--2736, 2019.
+  \item \me\ and M. Margaliot, ``\href{https://doi.org/10.1109/LCSYS.2018.2872295}{Output Selection and Observer Design for Boolean Control Networks: A Sub-Optimal Polynomial-Complexity Algorithm}'', \emph{IEEE Control Systems Letters}, 3(1):210--215, 2019.
+  \item \me, M. Margaliot and G. Even, ``\href{https://doi.org/10.1016/j.automatica.2018.02.014}{Minimal Controllability of Conjunctive Boolean Networks is NP-Complete}'', \emph{Automatica}, 92:56--62, 2018.
+\end{pubs}
+
+\section{Conference Publications}
+\begin{pubs}
+  \item Y. Wang, \me, B. Mu and O. Salzman, ``\href{https://doi.org/10.24963/ijcai.2025/999}{Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions}'', \emph{Proc.\ International Joint Conference on Artificial Intelligence (IJCAI)}, 8987--8995, 2025.
+  \item Y. Sherma, \me\ and O. Salzman, ``\href{https://doi.org/10.1609/socs.v18i1.35985}{From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem}'', \emph{Proc.\ International Symposium on Combinatorial Search (SoCS)}, 136--144, 2025. \textbf{Best Paper Award.}
+  \item D. Gnad, L. Alon, \me\ and A. Shleyfman, ``\href{https://doi.org/10.1609/aaai.v39i25.34851}{PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning}'', \emph{Proc.\ AAAI Conference on Artificial Intelligence}, 26507--26515, 2025.
+  \item \me, A. Felner and G. A. Kaminka, ``\href{https://doi.org/10.1609/icaps.v34i1.31527}{Tightest Admissible Shortest Path}'', \emph{Proc.\ International Conference on Automated Planning and Scheduling (ICAPS)}, 643--652, 2024.
+  \item \me, A. Felner and G. A. Kaminka, ``\href{https://doi.org/10.3233/FAIA230567}{A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates}'', \emph{Proc.\ European Conference on Artificial Intelligence (ECAI)}, 2607--2614, 2023.
+  \item \me\ and G. A. Kaminka, ``\href{https://doi.org/10.1609/icaps.v33i1.27222}{Planning with Multiple Action-Cost Estimates}'', \emph{Proc.\ International Conference on Automated Planning and Scheduling (ICAPS)}, 427--437, 2023.
+  \item \me\ and M. Margaliot, ``\href{https://doi.org/10.1109/MED.2019.8798547}{A Generalization of Linear Positive Systems}'', \emph{27th Mediterranean Conference on Control and Automation (MED)}, 340--345, 2019.
+  \item \me\ and M. Margaliot, ``\href{https://doi.org/10.1109/CDC.2018.8619509}{A Generalization of Smillie's Theorem on Strongly Cooperative Tridiagonal Systems}'', \emph{IEEE Conference on Decision and Control (CDC)}, 3080--3085, 2018.
+  \item \me\ and M. Margaliot, ``Observability Analysis and Observer Design for Boolean Control Networks: A Sub-Optimal Polynomial-Complexity Algorithm'', \emph{IEEE International Conference on the Science of Electrical Engineering (ICSEE)}, 2018.
+\end{pubs}
+
+\section{Workshop Publications}
+\begin{pubs}
+  \item D. Gnad, L. Alon, \me\ and A. Shleyfman, ``PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning'', \emph{ICAPS'24 Workshop on Heuristics and Search for Domain-Independent Planning (HSDIP)}, 2024.
+  \item \me, A. Felner and G. A. Kaminka, ``A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates'', \emph{ICAPS'23 Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2023.
+  \item \me\ and G. A. Kaminka, ``Planning with Dynamically Estimated Action Costs'', \emph{ICAPS'22 Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2022.
+  \item \me\ and G. A. Kaminka, ``Position Paper: Online Modeling for Offline Planning'', \emph{ICAPS'22 Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2022.
+\end{pubs}
+
+\section{Invited Talks}
+\begin{datedlist}
+\bitem{Search-based Planning Laboratory (SBPL), Carnegie Mellon University}{May 2025}
+\bitem{Computational Robotics Lab (CRL), Technion}{Jun 2024}
+\bitem{Adams Fellowship Conference, Israel Academy of Sciences and Humanities, Jerusalem}{Feb 2023}
+\bitem{Bar-Ilan Symposium on Foundations of AI (BISFAI), Ramat Gan}{Feb 2023}
+\blast{Israeli Association for Artificial Intelligence (IAAI) Symposium, Haifa}{Jun 2022}
+\end{datedlist}
+
+\section{Software}
+\begin{itemize}
+  \item \href{https://github.com/eyal-weiss/plandem-public}{PlanDEM} -- domain-independent planner for dynamically estimated action models (author)
+  \item \href{https://github.com/yi213-robotic/MEET}{MEET} -- bidirectional search (IJCAI 2025); being integrated into \href{https://ompl.kavrakilab.org/}{OMPL}
+  \item \href{https://github.com/CRL-Technion/wh-rearrangement}{Warehouse Rearrangement} -- reference implementation (SoCS 2025)
+  \item \href{https://github.com/dgnad/numeric-fast-downward}{Numeric Fast Downward} -- numeric pattern-database heuristics (AAAI 2025)
+  \item \href{https://github.com/eyal-weiss/CSNA-public}{CSNA} -- cost-sensitive neighborhood aggregation for graph neural networks
+\end{itemize}
+
+\section{Service}
+\textbf{Reviewer, conferences:} ICAPS, AAAI, IJCAI, RSS, ICANN
+
+\textbf{Reviewer, journals:} IEEE Robotics and Automation Letters; Automatica; IEEE Transactions on Automatic Control; European Journal of Control; IEEE Transactions on Network Science and Engineering; Optimization and Engineering
+
+\vspace{3pt}\Needspace{4\baselineskip}
+\textbf{Organizing committee}
+\begin{datedlist}
+\bitem{ICAPS Workshop on Reliability In Planning and Learning (RIPL)}{2026}
+\bitem{ICAPS Workshop on Heuristics and Search for Domain-independent Planning \mbox{(HSDIP)}}{2025}
+\blast{ICAPS Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}{2023, 2024}
+\end{datedlist}
+\vspace{3pt}\Needspace{3\baselineskip}
+\textbf{Session chair}
+\begin{datedlist}
+\bitem{European Conference on Artificial Intelligence (ECAI)}{2023}
+\blast{IEEE Conference on Decision and Control (CDC)}{2018}
+\end{datedlist}
+
+\section{Student Supervision and Mentoring}
+\begin{datedlist}
+\bitem{Research mentoring of graduate students at CRL, Technion, leading to joint publications (IJCAI 2025, SoCS 2025)}{2024 -- 2026}
+\bitem{Supervision of Computer Science graduation projects in heuristic search, Technion}{2025 -- 2026}
+\bitem{Supervision of gifted high-school students' research projects, \href{https://www.madaney.net/en/site/programs/alpha/}{Alpha} program, Bar-Ilan University}{2022 -- 2024}
+\blast{Supervision of Electrical Engineering graduation projects in autonomous driving with mini-scale cars, Tel Aviv University}{2018 -- 2019}
+\end{datedlist}
+
+\section{Teaching Experience}
+\entry{\org{Bar-Ilan University}, Department of Computer Science -- \role{Teaching Assistant}}{2020 -- 2024}
+\begin{itemize}
+  \item Artificial Intelligence (2024); Statistical Methods in Computer Science (2023); Introduction to Intelligent, Smart and Cognitive Systems (2021--2022); Object Oriented Programming (2021); Computer Structure (2020--2022)
+\end{itemize}
+\vspace{4pt}
+\entry{\org{Tel Aviv University}, School of Electrical Engineering -- \role{Teaching Assistant and Laboratory Instructor}}{2016 -- 2020}
+\begin{itemize}
+  \item Stochastic Processes (2019--2020); Signals and Systems (2017--2020); Random Signals and Noise (2017--2020); Optimal Control (2016--2017)
+  \item Laboratory of Advanced Control (2016--2020)
+\end{itemize}
+
+\section{Professional Experience}
+\entry{\org{Mellanox Technologies} (now part of NVIDIA), Israel -- \role{Network Architecture Intern}}{2015}
+\entry{\org{Mellanox Technologies} -- \role{Chip Design Intern}}{2013 -- 2014}
+
+\section{Skills and Languages}
+\begin{itemize}
+  \item Programming: C, C++, Python, Java, MATLAB, Bash; comfortable picking up additional languages as needed
+  \item Laboratory: robotic systems, electronics and low-level controllers
+  \item Languages: Hebrew (native), English (full professional proficiency)
+\end{itemize}
+
+\section{Community and Volunteering}
+\begin{datedlist}
+\bitem{Tutor, economic empowerment program of ``Misdar Dorshei Tov''}{2018 -- 2022}
+\bitem{Technical editor, ``Good to Know'' project, Tel Aviv University}{2017}
+\blast{Personal mentor for youth at risk, ``Shimony'' Children's Home}{2012 -- 2014}
+\end{datedlist}
+
+\end{document}

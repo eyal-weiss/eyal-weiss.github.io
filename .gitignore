@@ -4,3 +4,11 @@ future_plans_personal_website.md
 *.pdf
 !static/cv.pdf
 !static/companions/*.pdf
+
+# LaTeX build artifacts (cv/)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz

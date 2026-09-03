@@ -1,0 +1,605 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{comment}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \hyphenpenalty=10000%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading[\emph{Curriculum vitae}]{Eyal Weiss}
+
+\section{Contact Information}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.9in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+%\href{http://www.cse.osu.edu/}%
+%     {Department of Computer Science and Engineering} & \\
+%\href{http://www.osu.edu/}{The Ohio State University}
+%8151 33rd Ave S Unit 409   & 507-304-1668 \\
+\url{https://eyal-weiss.github.io}      & \email{eyalw@andrew.cmu.edu}\\
+\end{tabular}
+
+%\section{Objective}
+
+%Insert text here if you want to
+%\begin{innerlist}
+%\item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+%\end{innerlist}
+
+\section{Research Interests}
+
+Artificial intelligence, automated planning, heuristic search, robotics, control theory
+
+\section{Research Positions}
+
+\href{https://www.cmu.edu/}{\textbf{Carnegie Mellon University}}, Pittsburgh, PA, USA
+
+\begin{outerlist}
+\item[] Postdoctoral Researcher, \href{https://www.ri.cmu.edu/}
+             {Robotics Institute}, August 2026–current
+        \begin{innerlist}
+        \item Topics: Search, AI Planning, Motion Planning, Combinatorial Optimization, Robotics
+        \item Hosts:
+              \href{https://www.cs.cmu.edu/~maxim/}
+                   {Prof. Maxim Likhachev} (\href{https://www.ri.cmu.edu/robotics-groups/search-based-planning-laboratory/}{Search-based Planning Laboratory}) and
+              \href{https://jiaoyangli.me/}
+                   {Prof. Jiaoyang Li} (\href{https://arcs-group.github.io/}{ARCS Lab})
+        \end{innerlist}
+
+
+\end{outerlist}
+\vspace{.1in}
+\href{https://www.technion.ac.il/en/}{\textbf{Technion - Israel Institute of Technology}}, Haifa, Israel
+
+\begin{outerlist}
+\item[] Postdoctoral Scholar, \href{https://www.cs.technion.ac.il/}
+             {Computer Science}, October 2024 to August 2026
+        \begin{innerlist}
+        \item Topics: Search, Planning, Motion Planning, Robotics
+        \item Host:
+              \href{https://www.orensalzman.com/}
+                   {Prof. Oren Salzman}
+        \end{innerlist}
+
+
+\end{outerlist}
+
+\section{Education}
+
+\href{https://www.biu.ac.il/en}{\textbf{Bar-Ilan University}},
+Ramat Gan, Israel
+\begin{outerlist}
+
+\item[] Ph.D.,
+        \href{https://www.cs.biu.ac.il/en}
+             {Computer Science}, October 2019 to September 2024
+        \begin{innerlist}
+        \item Thesis Topic: \emph{Graph Search and Automated Planning
+with Multiple Cost Estimators}
+        \item Advisor:
+              \href{https://u.cs.biu.ac.il/~kaminkg/}
+                   {Prof. Gal A. Kaminka}
+        \end{innerlist}
+
+
+\end{outerlist}
+\vspace{.1in}
+\href{https://english.tau.ac.il/}{\textbf{Tel Aviv University}},
+Tel Aviv, Israel
+\begin{outerlist}
+\item[] M.Sc.,
+\href{https://en-engineering.tau.ac.il/School-of-Electrical-Engineering/main}
+{Electrical Engineering},
+March 2018
+\begin{innerlist}
+	\item Topic: \emph{Minimal Controllability and Minimal Observability of Conjunctive Boolean Networks}
+	\item Advisor:
+	\href{https://www.eng.tau.ac.il/~michaelm/}
+	{Prof. Michael Margaliot}
+	\item \emph{Cum Laude}
+\end{innerlist}
+
+\item[] B.Sc.,
+\href{https://en-engineering.tau.ac.il/School-of-Electrical-Engineering/main}
+{Electrical Engineering}, 
+October 2016
+\begin{innerlist}
+\item \emph{Summa Cum Laude}
+\end{innerlist}
+
+\end{outerlist}
+
+\section{Additional Research Experience}
+
+Research Assistant \hfill {April 2018 to September 2019}
+\begin{innerlist}
+
+\item[] Department of Electrical Engineering,\\
+        Tel Aviv University\\
+        Supervisor: Prof. Michael Margaliot
+\end{innerlist}
+
+\section{Honours and Awards}
+%Awards
+\begin{innerlist}
+	\item  SoCS 2025 Best Paper Award
+	\item  \href{https://adams.academy.ac.il/}{``Adams Fellowship"} scholarship for outstanding doctoral students in the Natural and Exact Sciences\hfill 2022--2024
+	\item Excellence scholarship for research students, Computer Science Department\hfill 2023
+	\item ``Milgat Hanasi" scholarship for excellent Ph.D. students\hfill 2021--2023
+	\item ``Shlomo Shmeltzer Institute for Smart Transportation Scholarship"\hfill 2017
+	\item Excellent student prize for M.Sc. students, Faculty of Engineering\hfill 2017
+	\item ``Velger Prize" of excellence for graduate studies in Systems and Control\hfill 2017
+	\item ``Final Prize" for excellent students in Electrical Engineering\hfill 2015
+	\item ``Freescale Scholarship" for excellent students in Electrical Engineering\hfill 2014
+	\item Dean's Honors (every year of the B.Sc.)\hfill 2012--2016
+\end{innerlist}
+
+\section{Hardware and Software Skills}
+Computer Programming:
+\begin{innerlist}
+	\item Proficient: C, C$+$$+$, Java, Python, \Matlab, Bash
+	\item Can handle (using AI coding models) any programming language
+\end{innerlist}
+Laboratory Experience:
+\begin{innerlist}
+	\item Robotic systems
+	\item Electronics and low-level controllers
+\end{innerlist}
+
+\section{Service}
+Reviewer
+\begin{innerlist}
+	\item \emph{International Conference on Automated Planning and Scheduling (ICAPS)}
+	\item \emph{Annual AAAI Conference on Artificial Intelligence (AAAI)}
+	\item \emph{International Joint Conference on Artificial Intelligence (IJCAI)}
+	\item \emph{Robotics: Science and Systems (RSS)}
+	\item \emph{IEEE Robotics and Automation Letters (RA-L)}
+	\item \emph{International Conference on Artificial Neural Networks (ICANN)}
+	\item \emph{Automatica}
+	\item \emph{IEEE Transactions on Automatic Control}
+	\item \emph{European Journal of Control}
+	\item \emph{IEEE Transactions on Network Science and Engineering}
+	\item \emph{Optimization and Engineering}
+\end{innerlist}
+
+\halfblankline
+
+Organizing Committee
+\begin{innerlist}
+\item \emph{ICAPS Workshop on Reliability In Planning and Learning (RIPL)}, 2026
+\item \emph{ICAPS Workshop on Heuristics and Search for Domain-independent Planning (HSDIP)}, 2025
+\item \emph{ICAPS Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 
+2024	
+\item \emph{ICAPS Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2023
+\end{innerlist}
+
+\halfblankline
+
+Session chair
+\begin{innerlist}
+	\item \emph{European Conference on Artificial Intelligence (ECAI)}, 2023
+	\item \emph{IEEE Conference on Decision and Control (CDC)}, 2018
+\end{innerlist}
+
+\section{Journal Publications}
+\vspace{-.1275in}
+\begin{bibsection}
+	\item {\bf E. Weiss} and M. Margaliot, ``A Generalization of Linear Positive Systems with Applications to Nonlinear Systems: Invariant Sets and the Poincar\'e--Bendixson Property", \emph{Automatica}, 123, 109358, 2021.
+	\item {\bf E. Weiss} and M. Margaliot, ``Is My System of ODEs k-Cooperative?", \emph{IEEE Control Systems Letters}, 5:73--78, 2020.
+	\item {\bf E. Weiss} and M. Margaliot, ``A Polynomial-Time Algorithm for Solving the Minimal Observability Problem in Conjunctive Boolean Networks", \emph{IEEE\\ Transactions on Automatic Control}, 64(7):2727--2736, 2018.
+	\item {\bf E. Weiss} and M. Margaliot, ``Output Selection and Observer Design for Boolean Control Networks: A Sub-Optimal Polynomial-Complexity Algorithm", \emph{IEEE Control Systems Letters}, 3:210--215, 2018.
+	\item {\bf E. Weiss} and M. Margaliot and G. Even, ``Minimal Controllability of Conjunctive Boolean Networks is NP-Complete", \emph{Automatica}, 92:56--62, 2018.
+\end{bibsection}
+
+\section{Preprints}
+\vspace{-.125in}
+\begin{bibsection}
+	\item H. Peer and {\bf E. Weiss} and R. Alterovitz and O. Salzman, ``Generalizing Multi-Objective Search via Objective-Aggregation Functions'', \emph{arXiv preprint} \href{https://arxiv.org/abs/2509.22085}{arXiv:2509.22085}, 2025.
+\end{bibsection}
+
+\section{Conference Publications}
+\vspace{-.125in}
+\begin{bibsection}
+	\item Y. Wang and {\bf E. Weiss} and B. Mu and O. Salzman, ``Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions'', \emph{Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)}, 8987--8995, 2025.
+	\item Y. Sherma and {\bf E. Weiss} and O. Salzman, ``From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem'', \emph{Proceedings of the International Symposium on Combinatorial Search (SoCS)}, 136--144, 2025.
+	\item D. Gnad and L. Alon and {\bf E. Weiss} and A. Shleyfman, ``PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning", \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 26507--26515, 2025.
+	\item {\bf E. Weiss} and A. Felner and G. A. Kaminka, ``Tightest Admissible Shortest Path", \emph{Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS)}, 643--652, 2024.
+	\item {\bf E. Weiss} and A. Felner and G. A. Kaminka, ``A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates", \emph{Proceedings of the European Conference on Artificial Intelligence (ECAI)}, 2607--2614, 2023.
+	\item {\bf E. Weiss} and G. A. Kaminka, ``Planning with Multiple Action-Cost Estimates", \emph{Proceedings of the International Conference on Automated Planning and Scheduling (ICAPS)}, 427--437, 2023.
+	\item {\bf E. Weiss} and M. Margaliot, ``A Generalization of Linear Positive Systems", \emph{2019 27th Mediterranean Conference on Control and Automation (MED)}, 340--345, 2019.
+	\item {\bf E. Weiss} and M. Margaliot, ``A Generalization of Smillie’s Theorem on Strongly Cooperative Tridiagonal Systems", \emph{2018 IEEE Conference on Decision and Control (CDC)}, 3080--3085, 2018.
+	\item {\bf E. Weiss} and M. Margaliot, ``Observability Analysis and Observer Design for Boolean Control Networks: A Sub-Optimal Polynomial-Complexity Algorithm", \emph{IEEE International Conference on the Science of Electrical Engineering}, 2018.
+\end{bibsection}
+
+\section{Workshop Publications}
+\vspace{-.125in}
+\begin{bibsection}
+	\item D. Gnad and L. Alon and {\bf E. Weiss} and A. Shleyfman, ``PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning", \emph{ICAPS'24 Workshop on Heuristics and Search for Domain-Independent Planning (HSDIP)}, 2024.
+	\item {\bf E. Weiss} and A. Felner and G. A. Kaminka, ``A Generalization of the Shortest Path Problem to Graphs with Multiple Edge-Cost Estimates", \emph{ICAPS'23 Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2023.
+	\item {\bf E. Weiss} and G. A. Kaminka, ``Planning with Dynamically Estimated Action Costs", \emph{ICAPS'22 Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2022.
+	\item {\bf E. Weiss} and G. A. Kaminka, ``Position Paper: Online Modeling for Offline Planning", \emph{ICAPS'22 Workshop on Reliable Data-Driven Planning and Scheduling (RDDPS)}, 2022.
+\end{bibsection}
+
+\section{Teaching Experience and Student Supervision}
+
+Positions at the Faculty of Computer Science, Technion -- Israel Institute of Technology:
+
+Student Supervisor \hfill {2025--2026}
+\begin{innerlist}
+	
+	\item[] Supervision of graduation projects of Computer Science students, in the field of heuristic search
+\end{innerlist}
+
+Positions at the Department of Computer Science, Bar-Ilan University:
+
+Student Supervisor \hfill {October 2022 to March 2024}
+\begin{innerlist}
+	
+	\item[] Supervision of students conducting research projects at \href{https://www.madaney.net/en/site/programs/alpha/}{``Alpha"} -- a research program for gifted high-school students in Israel, associated with the Future Scientists Center 
+\end{innerlist}
+
+Teaching Assistant \hfill {Fall and spring semesters 2024}
+\begin{innerlist}
+	
+	\item[] Artificial Intelligence
+\end{innerlist}
+
+Teaching Assistant \hfill {Spring semester 2023}
+\begin{innerlist}
+	
+	\item[] Statistical Methods in Computer Science
+\end{innerlist}
+
+Teaching Assistant \hfill {Spring semesters 2021--2022}
+\begin{innerlist}
+	
+	\item[] Introduction to Intelligent, Smart and Cognitive Systems
+\end{innerlist}
+
+Teaching Assistant \hfill {Spring semester 2021}
+\begin{innerlist}
+	
+	\item[] Object Oriented Programming
+\end{innerlist}
+
+Teaching Assistant \hfill {Fall semesters 2020--2022}
+\begin{innerlist}
+	
+	\item[] Computer Structure
+\end{innerlist}
+
+\halfblankline
+
+Positions at Tel Aviv University:
+
+Teaching Assistant \hfill {Fall semester 2019--2020}
+\begin{innerlist}
+	
+	\item[] Stochastic Processes \\
+	Graduate School of Electrical Engineering
+\end{innerlist}
+
+Teaching Assistant \hfill {Spring semesters 2017--2020}
+\begin{innerlist}
+	
+	\item[] Signals and Systems  \\
+	Electrical Engineering International Program
+\end{innerlist}
+
+Teaching Assistant \hfill {Fall semesters 2017--2020}
+\begin{innerlist}
+	
+	\item[] Random Signals and Noise \\
+	Electrical Engineering International Program
+\end{innerlist}
+
+Laboratory Instructor \hfill {Fall semesters 2016--2020}
+\begin{innerlist}
+\item[] Laboratory of Advanced Control\\
+        Department of Electrical Engineering
+        
+\end{innerlist}
+
+Student Supervisor \hfill {October 2018 to September 2019}
+\begin{innerlist}
+	
+	\item[] Supervision of graduation projects of Electrical Engineering students, in the field of autonomous driving, using mini-scale cars  \\
+	Department of Electrical Engineering
+\end{innerlist}
+
+Teaching Assistant \hfill {Fall semester 2016--2017}
+\begin{innerlist}
+
+\item[] Optimal Control \\
+        Graduate School of Electrical Engineering
+\end{innerlist}
+
+\section{Professional Experience}
+Positions at Mellanox (today part of Nvidia)
+\begin{innerlist}
+	\item Network architecture intern \hfill 2015
+	\item Chip design intern \hfill 2013--2014
+\end{innerlist}
+
+
+\section{Social Activities}
+\begin{innerlist}
+	\item Tutor at the economic empowerment program of ``Misdar Dorshei Tov"  \hfill 2018--2022
+	\item Technical editor at project ``Good to Know" of Tel Aviv University  \hfill 2017
+	\item Personal mentor at the Children's Home ``Shimony", at ``HaKfar HaYarok", within the framework of ``Youth at risk" \hfill 2012--2014
+	\item Guidance and management roles at the Scouts movement \hfill 2004--2006
+\end{innerlist}
+
+\section{Languages}
+\begin{innerlist}
+	\item Hebrew -- native
+	\item English -- full professional proficiency
+\end{innerlist}
+
+%\section{Demonstrated Leadership}
+%Throughout my career as an academic I have led various types of projects in three different universities (TAU, BIU, Technion), ranging from guiding gifted high school students in small research projects, through supervising graduation projects in engineering and computer science, and finally to advising graduate students in their work on research papers -- resulting in high quality publications.
+%
+%\section{Personal}
+%I enjoy various sports, especially running. I love hiking, trekking and spending time in nature.
+%I’m passionate about learning new things and solving problems.
+%My favorite time is when I’m with my wife Yael, my sons Noam and Erez, and my dog Bertha.
+
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------%
+% The following is copyright and licensing information for
+% redistribution of this LaTeX source code; it also includes a liability
+% statement. If this source code is not being redistributed to others,
+% it may be omitted. It has no effect on the function of the above code.
+%----------------------------------------------------------------------%
+% Copyright (c) 2007, 2008, 2009, 2010, 2011 by Theodore P. Pavlic
+%
+% Unless otherwise expressly stated, this work is licensed under the
+% Creative Commons Attribution-Noncommercial 3.0 United States License. To
+% view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc/3.0/us/ or send a letter to
+% Creative Commons, 171 Second Street, Suite 300, San Francisco,
+% California, 94105, USA.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+% OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%----------------------------------------------------------------------%
