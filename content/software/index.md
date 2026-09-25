@@ -18,4 +18,6 @@ ShowToc: false
 
 **PlanDEM** — Papers from my PhD were mostly tested using [PlanDEM](https://github.com/eyal-weiss/plandem-public), a domain-independent planner that provides implementation to algorithms that work with dynamically estimated action models. This is an open source project, that gets major updates typically after a new paper on the matter is published.
 
+**Wonderlattice** — The code for [wonderlattice.com](https://wonderlattice.com), my educational project of hands-on interactive math experiments, is available [here](https://github.com/eyal-weiss/wonderlattice). It is a static site with no build step that runs in any browser, even offline. Contributions, including translations, are welcome.
+
 Contact me for questions or requests.

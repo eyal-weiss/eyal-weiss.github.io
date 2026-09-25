@@ -8,6 +8,8 @@ ShowToc: false
 
 **News: announcements and ongoing projects**
 
+- Launched **[Wonderlattice](https://wonderlattice.com)** 🎉, an educational side project: a free collection of small, hands-on experiments with big mathematical ideas, for curious minds of any age, with no background needed. It has thirteen "rooms", each built around one surprise: draw flowers with two turning arms, roll three dice that beat each other in a circle, weave houndstooth on a tiny loom, send a picture through a storm of flipped bits, and more. Every room comes with an optional explanation (with sources) and a visiting mathematician. No scores, accounts, ads or tracking, just play. The code is open source on [GitHub](https://github.com/eyal-weiss/wonderlattice), and ideas, fixes and translations are welcome!
+
 - Started a new position as a postdoctoral researcher at the [Robotics Institute](https://www.ri.cmu.edu/), Carnegie Mellon University, affiliated with the [Search-based Planning Laboratory (SBPL)](https://www.ri.cmu.edu/robotics-groups/search-based-planning-laboratory/) and the [ARCS Lab](https://arcs-group.github.io/) 🎉
 
 - Working on a very exciting research project that analyzes LLMs using... I'll share once it's ready :)
