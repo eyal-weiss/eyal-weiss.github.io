@@ -18,7 +18,7 @@ Y. Wang, B. Mu, **E. Weiss**, O. Salzman — *IJCAI 2025*
 `bidirectional search` `meet-in-the-middle` `termination conditions`
 
 [Generalizing Multi-Objective Search via Objective-Aggregation Functions](https://arxiv.org/abs/2509.22085) · [Technical Companion (PDF)](/companions/multi_objective_search_companion.pdf)
-H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *arXiv preprint*
+H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *IEEE RA-L (accepted)*
 `multi-objective search` `objective aggregation` `robotics planning`
 
 [Tightest Admissible Shortest Path](https://ojs.aaai.org/index.php/ICAPS/article/download/31527/33687) · [Technical Companion (PDF)](/companions/tightest_admissible_shortest_path_companion.pdf)
