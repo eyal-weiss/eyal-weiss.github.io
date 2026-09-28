@@ -47,6 +47,9 @@ params:
       [ARCS Lab](https://arcs-group.github.io/) led by
       [**Prof. Jiaoyang Li**](https://jiaoyangli.me/).
       My current research spans Search, AI Planning, Motion Planning for robotics, and Combinatorial Optimization.
+      I am particularly interested in planning with learned skills and models: learned robot skills offer
+      a scalable and general path toward ever more capable robots, and planning is what composes them into
+      reliable, long-horizon behavior.
 
 
       ---
