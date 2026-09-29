@@ -1,7 +1,8 @@
 ---
 title: "Nobody is in charge of the flock"
-date: 2026-09-29
-draft: false
+date: 2026-09-30
+draft: true
+aliases: ["/blog/2026-09-29-a-mind-of-many/"]
 summary: "A flock with no leader, three local rules, and one knob that flips a crowd from chaos to a single moving body — and what that says about planning for teams of robots."
 ---
 
