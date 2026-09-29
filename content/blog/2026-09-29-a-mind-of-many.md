@@ -39,6 +39,13 @@ Here is the surprising part. I ran the room's own model headlessly, keeping the 
 
 Almost all of the change happens between 0.05 and 0.2, in the first few percent of the slider. Below that, you get a restless crowd that never commits to anything. Above it, you get a single body moving as one. In between, it depends on the random start: some runs organize and some do not.
 
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; margin-bottom: var(--content-gap);">
+<img src="/images/blog/flock-align-0.05.svg" alt="The flock at Match direction 0.05: birds scattered across the frame, pointing every which way (direction agreement 9%)." loading="lazy" style="flex: 1 1 280px; min-width: 0; height: auto; margin: 0;">
+<img src="/images/blog/flock-align-0.2.svg" alt="The same flock at Match direction 0.2: the birds have gathered into one band, all flying the same way (direction agreement 99%)." loading="lazy" style="flex: 1 1 280px; min-width: 0; height: auto; margin: 0;">
+</div>
+
+*The same 130 birds from the same random start, after a minute of simulated time in the room's own model. Only "Match direction" differs. Each mark points where its bird is heading, and its faint tail traces roughly the last second of flight.*
+
 You can see this yourself by comparing [the flock at 0.05](https://wonderlattice.com/#room=flock&align=0.05) with [the flock at 0.2](https://wonderlattice.com/#room=flock&align=0.2). The individuals are identical. Their rules are identical, except for how much weight each one gives to a single consideration. The collective behaviour is not a little different; it is a different world.
 
 This is not a quirk of the room. In 1995, Tamás Vicsek and colleagues studied an even simpler model, in which particles move at constant speed and adopt the average direction of their neighbours plus some random noise. When the noise is high or the crowd is sparse, the particles wander in all directions. But once the noise drops below a critical level (or the density rises above one), the system goes through a **phase transition**: the particles spontaneously pick a common direction and move off together, even though nothing in their rules favours any particular direction.
