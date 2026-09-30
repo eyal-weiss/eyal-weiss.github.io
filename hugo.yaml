@@ -15,7 +15,7 @@ params:
   env: production
   description: "Postdoctoral Scholar in AI & Robotics — Carnegie Mellon University"
   author: Eyal Weiss
-  images: ["/images/profile.jpg"]
+  images: ["/images/og-default.png"]
 
   social:
     twitter: "eyal__weiss"
