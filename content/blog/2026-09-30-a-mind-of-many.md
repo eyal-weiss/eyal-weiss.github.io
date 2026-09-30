@@ -79,7 +79,7 @@ The best way to understand this is to play with it. Open **[A mind of many](http
 - Set "Match direction" to zero and turn "Stay together" up. Can a crowd stay together without agreeing where to go?
 - Drag your finger through a moving flock with "Repel" selected, and watch it split and heal.
 
-The room is one of twenty-seven in [Wonderlattice](https://wonderlattice.com), a free collection of small experiments with big mathematical ideas, from shapes and chance to puzzles, engineering, and signals, for curious minds of any age and with no background needed. It is available in five languages (English, Spanish, French, Hebrew, and Portuguese), with no accounts, ads, or tracking. The code is [open source](https://github.com/eyal-weiss/wonderlattice), and contributions, including translations, are welcome.
+The room is one of twenty-seven in [Wonderlattice](https://wonderlattice.com), a free collection of small experiments with big mathematical ideas, from shapes and chance to puzzles, engineering, and signals, for curious minds of any age and with no background needed. It is available in six languages (English, Arabic, Spanish, French, Hebrew, and Portuguese), with no accounts, ads, or tracking. The code is [open source](https://github.com/eyal-weiss/wonderlattice), and contributions, including translations, are welcome.
 
 ---
 
