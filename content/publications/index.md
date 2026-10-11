@@ -2,7 +2,7 @@
 title: "Selected Publications"
 layout: "single"
 url: "/publications/"
-summary: "Selected Publications"
+summary: "Selected publications by Eyal Weiss on heuristic search, AI planning, motion planning, multi-agent planning and control theory, with step-by-step technical companions."
 ShowToc: true
 TocOpen: true
 ---
@@ -13,13 +13,9 @@ For a full list, see my [Google Scholar](https://scholar.google.com/citations?us
 
 ## Combinatorial Search
 
-[Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions](https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/1923.pdf) · [Technical Companion (PDF)](/companions/bidirectional_search_companion.pdf)
-Y. Wang, B. Mu, **E. Weiss**, O. Salzman — *IJCAI 2025*
+[Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions](https://doi.org/10.24963/ijcai.2025/999) · [Technical Companion (PDF)](/companions/bidirectional_search_companion.pdf)
+Y. Wang, **E. Weiss**, B. Mu, O. Salzman — *IJCAI 2025*
 `bidirectional search` `meet-in-the-middle` `termination conditions`
-
-[Generalizing Multi-Objective Search via Objective-Aggregation Functions](https://arxiv.org/abs/2509.22085) · [Technical Companion (PDF)](/companions/multi_objective_search_companion.pdf)
-H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *IEEE RA-L (accepted)*
-`multi-objective search` `objective aggregation` `robotics planning`
 
 [Tightest Admissible Shortest Path](https://ojs.aaai.org/index.php/ICAPS/article/download/31527/33687) · [Technical Companion (PDF)](/companions/tightest_admissible_shortest_path_companion.pdf)
 **E. Weiss**, A. Felner, G. A. Kaminka — *ICAPS 2024*
@@ -45,7 +41,9 @@ D. Gnad, L. Alon, **E. Weiss**, A. Shleyfman — *AAAI 2025*
 
 ## Motion Planning & Robotics
 
-To be updated soon 😊
+[Generalizing Multi-Objective Search via Objective-Aggregation Functions](https://arxiv.org/abs/2509.22085) · [Technical Companion (PDF)](/companions/multi_objective_search_companion.pdf)
+H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *IEEE RA-L (accepted)*
+`multi-objective search` `objective aggregation` `robotics planning`
 
 ## Multi-Agent Systems
 

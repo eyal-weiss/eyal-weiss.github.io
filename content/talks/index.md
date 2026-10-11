@@ -2,7 +2,7 @@
 title: "Talks"
 layout: "single"
 url: "/talks/"
-summary: "Talks"
+summary: "Talks by Eyal Weiss at ICAPS, IJCAI, AAAI, ECAI and SoCS, with slides, posters and videos."
 ShowToc: true
 TocOpen: true
 ---
@@ -13,9 +13,9 @@ Talks - slides, posters, videos and paper PDFs:
 
 [SoCS 2025](https://socs25.search-conference.org/home), [main track](https://socs25.search-conference.org/program/accepted-papers) (August, Glasgow): [From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem](https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140) (**Best Paper Award** 🥳)
 
-[IJCAI 2025](https://2025.ijcai.org/), [main track](https://2025.ijcai.org/montreal-main-track-accepted-papers/) (August, Montreal): [Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions](https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/1923.pdf)
+[IJCAI 2025](https://2025.ijcai.org/), [main track](https://2025.ijcai.org/montreal-main-track-accepted-papers/) (August, Montreal): [Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions](https://doi.org/10.24963/ijcai.2025/999)
 
-Invited talk at [SBPL](http://www.sbpl.net/), Carnegie Mellon University (May)
+Invited talk at [SBPL](https://www.ri.cmu.edu/robotics-groups/search-based-planning-laboratory/), Carnegie Mellon University (May)
 
 [AAAI 2025](https://aaai.org/conference/aaai/aaai-25/), [main track](https://aaai.org/conference/aaai/aaai-25/main-technical-track/) (March, Philadelphia): [PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning](https://ojs.aaai.org/index.php/AAAI/article/view/34851)
 
@@ -23,9 +23,9 @@ Invited talk at [SBPL](http://www.sbpl.net/), Carnegie Mellon University (May)
 
 Invited talk at [CRL](https://crl.cs.technion.ac.il/), Technion (June, Haifa) \[[slides](https://drive.google.com/file/d/1caU-T5hIaM--d8Uvbu5ZfJL8X8NgojZB/view?usp=sharing)\]: Online Estimation of Edge Costs in Generalized Shortest-Path Problems: Extending Graph Definitions, Optimization Problems and Search Algorithms
 
-[ICAPS 2024](https://icaps23.icaps-conference.org/), [HSDIP Workshop](https://icaps24.icaps-conference.org/program/workshops/hsdip/) (June, Banff): [PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning](https://icaps24.icaps-conference.org/program/workshops/hsdip-papers/paper_13.pdf)
+[ICAPS 2024](https://icaps24.icaps-conference.org/), [HSDIP Workshop](https://icaps24.icaps-conference.org/program/workshops/hsdip/) (June, Banff): [PDBs Go Numeric: Pattern-Database Heuristics for Simple Numeric Planning](https://icaps24.icaps-conference.org/program/workshops/hsdip-papers/paper_13.pdf)
 
-[ICAPS 2024](https://icaps23.icaps-conference.org/), [main track](https://icaps24.icaps-conference.org/program/accepted/) (June, Banff) \[[slides](https://drive.google.com/file/d/1E-PZbR-rdsMR06RYLdCF_LaSYEZ3Nqu7/view?usp=sharing)\]: [Tightest Admissible Shortest Path](https://ojs.aaai.org/index.php/ICAPS/article/download/31527/33687)
+[ICAPS 2024](https://icaps24.icaps-conference.org/), [main track](https://icaps24.icaps-conference.org/program/accepted/) (June, Banff) \[[slides](https://drive.google.com/file/d/1E-PZbR-rdsMR06RYLdCF_LaSYEZ3Nqu7/view?usp=sharing)\]: [Tightest Admissible Shortest Path](https://ojs.aaai.org/index.php/ICAPS/article/download/31527/33687)
 
 ## 2023
 

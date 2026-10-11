@@ -2,7 +2,7 @@
 title: "Teaching"
 layout: "single"
 url: "/teaching/"
-summary: "Teaching"
+summary: "Eyal Weiss's teaching in control theory, statistics, programming and AI, with recorded lectures and the Wonderlattice project."
 ShowToc: false
 ---
 

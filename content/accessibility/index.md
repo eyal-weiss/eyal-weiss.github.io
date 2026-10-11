@@ -1,8 +1,11 @@
 ---
 title: "Accessibility Statement"
 layout: "single"
+summary: "Accessibility statement for eyal-weiss.github.io."
 ShowBreadCrumbs: true
 ShowToc: false
 ---
 
-This website is exempt from mandatory accessibility requirements under the applicable amendment to the internet accessibility regulations. It does not provide any services and is operated solely by a private individual, rather than by a nonprofit organization or a commercial entity.
+I want this site to be easy to use for everyone, including people who use screen readers, keyboard navigation or high-contrast settings. Images have text descriptions, and the site follows your system's light or dark mode.
+
+If anything here is hard to access, please email me at [eyalw@andrew.cmu.edu](mailto:eyalw@andrew.cmu.edu) and I will fix it or send you the content in another format.

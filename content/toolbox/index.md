@@ -2,7 +2,7 @@
 title: "Graduate Student Toolbox"
 layout: "single"
 url: "/toolbox/"
-summary: "Graduate Student Toolbox"
+summary: "Resources and tips for graduate students on writing papers, giving talks, presenting posters and reviewing."
 ShowToc: false
 ---
 
@@ -16,7 +16,7 @@ Sharpening these skills can make a **significant impact** on the exposure of you
 - [Writing papers and giving talks by Wheeler Ruml](https://www.youtube.com/watch?v=C98mCBWTDiE) is a helpful video containing various high-level suggestions
 - [Advices for PhD students by Sven Koenig](https://www.youtube.com/watch?v=F_p50V9f4jU&t=260s) is an hour-video filled with gems
 - [Oral and poster presentation by Reuven Boxman](https://www.youtube.com/watch?v=kb0iZnRGsnQ&list=PLNiWLB_wsOg4odAHnaZ5i71I4VSfHRFhR&index=2&t=3107s) gives many practical tips for preparing and delivering presentations and posters, with a focus on getting the right attention at conferences
-- [Mistakes reviewers make by Niklas Elmqvist](https://sites.umiacs.umd.edu/elm/2016/02/01/mistakes-reviewers-make/) aids in understanding the peer review process, and provides concrete guidance on how to be a better reviewer
+- [Mistakes reviewers make by Niklas Elmqvist](https://web.archive.org/web/20230923173212/https://sites.umiacs.umd.edu/elm/2016/02/01/mistakes-reviewers-make/) aids in understanding the peer review process, and provides concrete guidance on how to be a better reviewer
 
 A few more practical tips of my own:
 

@@ -2,7 +2,7 @@
 title: "Open Access"
 layout: "single"
 url: "/open-access/"
-summary: "Open Access"
+summary: "Why all of Eyal Weiss's papers and research code are openly available."
 ShowToc: false
 ---
 

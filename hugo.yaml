@@ -1,6 +1,6 @@
 baseURL: "https://eyal-weiss.github.io/"
 languageCode: en-us
-title: "Eyal Weiss — Researcher"
+title: "Eyal Weiss — CMU Robotics Institute"
 theme: PaperMod
 enableRobotsTXT: true
 
@@ -16,6 +16,24 @@ params:
   description: "Postdoctoral Scholar in AI & Robotics — Carnegie Mellon University"
   author: Eyal Weiss
   images: ["/images/og-default.png"]
+
+  label:
+    text: "Eyal Weiss"
+
+  schema:
+    jobTitle: "Postdoctoral Researcher"
+    worksFor: "Robotics Institute, Carnegie Mellon University"
+    worksForURL: "https://www.ri.cmu.edu/"
+    sameAs:
+      - "https://scholar.google.com/citations?user=LO5sHMIAAAAJ"
+      - "https://orcid.org/0000-0003-0508-6213"
+      - "https://dblp.org/pid/188/9772.html"
+      - "https://www.semanticscholar.org/author/Eyal-Weiss/2017820"
+      - "https://arxiv.org/a/0000-0003-0508-6213"
+      - "https://github.com/eyal-weiss"
+      - "https://www.linkedin.com/in/eyal-weiss-research"
+      - "https://x.com/eyal__weiss"
+      - "https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw"
 
   social:
     twitter: "eyal__weiss"
@@ -65,9 +83,9 @@ params:
 
 
       I had the privilege to conduct my PhD under the supervision of
-      [**Prof. Gal A. Kaminka**](http://u.cs.biu.ac.il/~galk/), affiliated with the
-      [MAVERICK](http://u.cs.biu.ac.il/~galk/maverick/) research group, in the
-      [CS department at BIU](https://www.cs.biu.ac.il/en).
+      [**Prof. Gal A. Kaminka**](https://u.cs.biu.ac.il/~kaminkg/), affiliated with the
+      [MAVERICK](https://u.cs.biu.ac.il/~kaminkg/maverick/) research group, in the
+      [CS department at BIU](https://cs.biu.ac.il/).
       My research was, and partially still is, devoted to generalizing automated planning
       with dynamically estimated action models, where we combined tools from AI planning,
       graph theory and combinatorial optimization, to endow agents with enhanced planning

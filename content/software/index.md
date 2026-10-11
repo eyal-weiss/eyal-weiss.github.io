@@ -2,7 +2,7 @@
 title: "Software"
 layout: "single"
 url: "/software/"
-summary: "Software"
+summary: "Open-source code from Eyal Weiss's research: planners, search algorithms, multi-agent warehouse rearrangement and Wonderlattice."
 ShowToc: false
 ---
 

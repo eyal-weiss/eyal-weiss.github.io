@@ -2,7 +2,7 @@
 title: "Contact"
 layout: "single"
 url: "/contact/"
-summary: "Contact"
+summary: "Contact details for Eyal Weiss at the Robotics Institute, Carnegie Mellon University, plus links to research profiles."
 ShowToc: false
 ---
 

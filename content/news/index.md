@@ -2,7 +2,7 @@
 title: "News"
 layout: "single"
 url: "/news/"
-summary: "News"
+summary: "News from Eyal Weiss, postdoc at the CMU Robotics Institute: papers, awards, projects and workshops."
 ShowToc: false
 ---
 
@@ -16,7 +16,7 @@ ShowToc: false
 
 - Working on a very exciting research project that analyzes LLMs using... I'll share once it's ready :)
 
-- Submitted my first paper in the field of Graph Neural Networks (technique inspired by serach ideas).. check out the blog.
+- Submitted my first paper in the field of Graph Neural Networks (technique inspired by search ideas). Check out the blog.
 
 - Submitted a cool & semi-educational paper to IROS 2026. 
 
@@ -38,7 +38,7 @@ ShowToc: false
 
 **Workshop organization:**
 
-- Co-organizing RIPL Workshop at ICAPS 2026 (July, Montréal)
+- Co-organized RIPL Workshop at ICAPS 2026 (July, Montréal)
 - Co-organized HSDIP Workshop at ICAPS 2025 (November, Melbourne)
 - Co-organized RDDPS Workshop at ICAPS 2024 (June, Banff)
 - Co-organized RDDPS Workshop at ICAPS 2023 (July, Prague)
