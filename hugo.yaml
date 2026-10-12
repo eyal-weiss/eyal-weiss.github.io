@@ -13,7 +13,7 @@ pagination:
 
 params:
   env: production
-  description: "Postdoctoral Scholar in AI & Robotics — Carnegie Mellon University"
+  description: "Postdoctoral Researcher in AI & Robotics — Carnegie Mellon University"
   author: Eyal Weiss
   images: ["/images/og-default.png"]
 
@@ -49,7 +49,7 @@ params:
   homeInfoParams:
     Title: "Eyal Weiss"
     Subtitle: >
-      *Postdoctoral scholar | AI & Robotics | Planning, Search & Optimization*
+      *Postdoctoral researcher | AI & Robotics | Planning, Search & Optimization*
       <br>*Robotics Institute, Carnegie Mellon University*
     Content: >
       **What I'm passionate about:** AI and robotics, particularly through the lens of planning, search and control.
