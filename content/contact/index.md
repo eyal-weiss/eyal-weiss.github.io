@@ -17,10 +17,12 @@ How to find me on The Web:
 - [Google Scholar](https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en)
 - [LinkedIn](https://www.linkedin.com/in/eyal-weiss-research)
 - [ResearchGate](https://www.researchgate.net/profile/Eyal-Weiss-2)
-- [YouTube](https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw/playlists)
+- [YouTube](https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw)
 - [Semantic Scholar](https://www.semanticscholar.org/author/Eyal-Weiss/2017820)
 - [Web of Science](https://www.webofscience.com/wos/author/record/C-2586-2019)
 - [dblp](https://dblp.org/pid/188/9772.html)
+- [arXiv](https://arxiv.org/a/0000-0003-0508-6213)
+- [OpenReview](https://openreview.net/profile?id=~Eyal_Weiss1)
 - [ORCiD](https://orcid.org/0000-0003-0508-6213)
 - [GitHub](https://github.com/eyal-weiss)
 

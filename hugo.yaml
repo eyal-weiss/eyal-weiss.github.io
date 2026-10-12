@@ -30,6 +30,7 @@ params:
       - "https://dblp.org/pid/188/9772.html"
       - "https://www.semanticscholar.org/author/Eyal-Weiss/2017820"
       - "https://arxiv.org/a/0000-0003-0508-6213"
+      - "https://openreview.net/profile?id=~Eyal_Weiss1"
       - "https://github.com/eyal-weiss"
       - "https://www.linkedin.com/in/eyal-weiss-research"
       - "https://x.com/eyal__weiss"
@@ -114,7 +115,7 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/eyal-weiss-research"
     - name: youtube
-      url: "https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw/playlists"
+      url: "https://www.youtube.com/channel/UCWdweT0ooo0buk2m81lW9mw"
     - name: orcid
       url: "https://orcid.org/0000-0003-0508-6213"
     - name: x
