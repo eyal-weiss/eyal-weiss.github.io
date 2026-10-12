@@ -105,6 +105,26 @@ params:
 
       📄 [My complete CV](/cv.pdf)
 
+    Featured:
+      - title: "Plan for the packages, not the robots"
+        text: "A makespan-optimal planner for warehouse rearrangement that plans paths for the packages instead of the robots."
+        venue: "SoCS 2025 · Best Paper Award"
+        url: "/blog/2026-03-23-warehouse-rearrangement/"
+        image: "/images/featured/warehouse.png"
+        alt: "Initial and goal layouts of a small warehouse, with colored packages and two robots"
+      - title: "Multi-objective search for robots"
+        text: "Extends standard multi-objective search to objectives that aggregate hidden ones, with uses in robot navigation and manipulation."
+        venue: "IEEE RA-L 2026"
+        url: "https://arxiv.org/abs/2509.22085"
+        image: "/images/featured/objagg.jpg"
+        alt: "A robot arm reaching over a table of boxes"
+      - title: "Bidirectional search that stops sooner"
+        text: "Termination conditions that are cheap to compute and keep paths optimal, so the search can stop earlier."
+        venue: "IJCAI 2025"
+        url: "https://doi.org/10.24963/ijcai.2025/999"
+        image: "/images/featured/meet.png"
+        alt: "A* and MEET search on the same grid map; MEET expands fewer states"
+
   socialIcons:
     - name: email
       url: "mailto:eyalw@andrew.cmu.edu"

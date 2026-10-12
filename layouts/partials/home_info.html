@@ -12,6 +12,23 @@
     <div class="entry-content">
         {{ .Content | markdownify }}
     </div>
+    {{- with .Featured }}
+    <section class="featured" aria-labelledby="featured-title">
+        <h2 id="featured-title">Selected work</h2>
+        <div class="featured-grid">
+            {{- range . }}
+            <a class="featured-card" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>
+                <div class="featured-img"><img src="{{ .image }}" alt="{{ .alt }}" loading="lazy"></div>
+                <div class="featured-body">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .text }}</p>
+                    <span class="featured-venue">{{ .venue }}</span>
+                </div>
+            </a>
+            {{- end }}
+        </div>
+    </section>
+    {{- end }}
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </footer>
