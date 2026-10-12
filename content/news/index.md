@@ -8,7 +8,7 @@ ShowToc: false
 
 **News: announcements and ongoing projects**
 
-- Our paper *"Generalizing Multi-Objective Search via Objective-Aggregation Functions"* (with H. Peer, R. Alterovitz and O. Salzman) was accepted to **IEEE Robotics and Automation Letters (RA-L)** 🎉 Check it out on [arXiv](https://arxiv.org/abs/2509.22085)!
+- Our paper *"Generalizing Multi-Objective Search via Objective-Aggregation Functions"* (with H. Peer, R. Alterovitz and O. Salzman) was accepted to **IEEE Robotics and Automation Letters (RA-L)** 🎉 Check it out on [IEEE Xplore](https://doi.org/10.1109/LRA.2026.3741789) or [arXiv](https://arxiv.org/abs/2509.22085)!
 
 - Launched **[Wonderlattice](https://wonderlattice.com)** 🎉, an educational side project: a free collection of small, hands-on experiments with big mathematical ideas, for curious minds of any age, with no background needed. It has thirteen "rooms", each built around one surprise: draw flowers with two turning arms, roll three dice that beat each other in a circle, weave houndstooth on a tiny loom, send a picture through a storm of flipped bits, and more. Every room comes with an optional explanation (with sources) and a visiting mathematician. No scores, accounts, ads or tracking, just play. The code is open source on [GitHub](https://github.com/eyal-weiss/wonderlattice), and ideas, fixes and translations are welcome!
 

@@ -41,8 +41,8 @@ D. Gnad, L. Alon, **E. Weiss**, A. Shleyfman — *AAAI 2025*
 
 ## Motion Planning & Robotics
 
-[Generalizing Multi-Objective Search via Objective-Aggregation Functions](https://arxiv.org/abs/2509.22085) · [Technical Companion (PDF)](/companions/multi_objective_search_companion.pdf)
-H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *IEEE RA-L (accepted)*
+[Generalizing Multi-Objective Search via Objective-Aggregation Functions](https://doi.org/10.1109/LRA.2026.3741789) · [arXiv](https://arxiv.org/abs/2509.22085) · [Technical Companion (PDF)](/companions/multi_objective_search_companion.pdf)
+H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *IEEE Robotics and Automation Letters, 2026*
 `multi-objective search` `objective aggregation` `robotics planning`
 
 ## Multi-Agent Systems
