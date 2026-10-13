@@ -142,7 +142,7 @@ params:
       url: "https://x.com/eyal__weiss"
 
   footer:
-    text: "[Accessibility Statement](/accessibility/)"
+    text: "[Accessibility Statement](/accessibility/) · [Privacy](/privacy/)"
 
   assets:
     favicon: "/favicon.ico"
