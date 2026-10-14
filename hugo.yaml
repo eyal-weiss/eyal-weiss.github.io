@@ -3,6 +3,8 @@ languageCode: en-us
 title: "Eyal Weiss — CMU Robotics Institute"
 theme: PaperMod
 enableRobotsTXT: true
+# No post uses tags or categories, so skip the empty /tags/ and /categories/ pages
+disableKinds: ["taxonomy", "term"]
 
 services:
   googleAnalytics:

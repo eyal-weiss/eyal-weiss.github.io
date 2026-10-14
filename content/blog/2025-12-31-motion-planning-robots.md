@@ -2,6 +2,7 @@
 title: "Motion planning time for robots is almost immediate"
 date: 2025-12-31
 draft: false
+summary: "A plain-language look at “Motions in Microseconds” (Thomason, Kingston and Kavraki, ICRA 2024), which cuts robot motion planning from milliseconds to microseconds with vectorized sampling-based planning."
 ---
 
 Have you ever watched a robot try to perform a task in the real world—perhaps a robotic arm trying to grab a specific object out of a cluttered bin, or a humanoid robot trying to navigate a messy room? If you have, you might have noticed a slight hesitation. The robot pauses, computes, moves a little, pauses again, and then commits to the action. That pause isn't uncertainty; it's intense calculation. The robot is desperately trying to figure out how to get from Point A to Point B without smashing its elbow into a table or colliding with a human.
