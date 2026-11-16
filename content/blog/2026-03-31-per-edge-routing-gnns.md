@@ -70,6 +70,6 @@ Three takeaways from this work:
 
 ---
 
-*"Cost-Sensitive Neighborhood Aggregation for Heterophilous Graphs: When Does Per-Edge Routing Help?" by Eyal Weiss, Technion. arXiv preprint, 2026.*
+*"Cost-Sensitive Neighborhood Aggregation for Heterophilous Graphs: When Does Per-Edge Routing Help?" by Eyal Weiss, Technion. arXiv preprint [arXiv:2603.24291](https://arxiv.org/abs/2603.24291), 2026.*
 
 *Code and data: [github.com/eyal-weiss/CSNA-public](https://github.com/eyal-weiss/CSNA-public)*

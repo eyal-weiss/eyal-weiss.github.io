@@ -18,7 +18,7 @@ ShowToc: false
 
 - Working on a very exciting research project that analyzes LLMs using... I'll share once it's ready :)
 
-- Submitted my first paper in the field of Graph Neural Networks (technique inspired by search ideas). Check out the blog.
+- Submitted my first paper in the field of Graph Neural Networks (technique inspired by search ideas). Check out the [preprint](https://arxiv.org/abs/2603.24291) and the [blog post](/blog/2026-03-31-per-edge-routing-gnns/).
 
 - Submitted a cool & semi-educational paper to IROS 2026. 
 
