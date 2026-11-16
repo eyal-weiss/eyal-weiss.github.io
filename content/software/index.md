@@ -2,11 +2,13 @@
 title: "Software"
 layout: "single"
 url: "/software/"
-summary: "Open-source code from Eyal Weiss's research: planners, search algorithms, multi-agent warehouse rearrangement and Wonderlattice."
+summary: "Open-source code from Eyal Weiss's research: planners, search algorithms, clustering, multi-agent warehouse rearrangement and Wonderlattice."
 ShowToc: false
 ---
 
-**Cost-Sensitive Neighborhood Aggregation (CSNA) for Heterophilous Graphs** — The code for our new arXiv paper, about per-edge routing in Graph Neural Networks (GNNs), is available [here](https://github.com/eyal-weiss/CSNA-public).
+**Distance-Aware Cluster Revival for e-means** — The code for my new arXiv paper, about which small clusters to remove in e-means (a mini-batch k-means algorithm in FAISS), is available [here](https://github.com/eyal-weiss/emeans-distance-revival). It includes the experimental protocol and the run records for reproducing the paper.
+
+**Cost-Sensitive Neighborhood Aggregation (CSNA) for Heterophilous Graphs** — The code for our arXiv paper, about per-edge routing in Graph Neural Networks (GNNs), is available [here](https://github.com/eyal-weiss/CSNA-public).
 
 **Multi-Agent Warehouse Rearrangement** — The code for our SoCS 2025 paper, about optimal multi-agent warehouse rearrangement, is available [here](https://github.com/CRL-Technion/wh-rearrangement).
 
