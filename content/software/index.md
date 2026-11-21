@@ -6,6 +6,8 @@ summary: "Open-source code from Eyal Weiss's research: planners, search algorith
 ShowToc: false
 ---
 
+**Net-Gain Revival for e-means** — The code for my new paper *Revive What Pays* (arXiv link to follow), about moving a cluster's center in e-means only when the split it funds is likely to pay off, is available [here](https://github.com/eyal-weiss/emeans-net-gain-revival). It builds on distance-aware revival (next entry) and includes the pre-registered protocols, the records of every run, and a technical report on everything tried during development. It is archived on [Zenodo](https://doi.org/10.5281/zenodo.24389631).
+
 **Distance-Aware Cluster Revival for e-means** — The code for my new [arXiv paper](https://arxiv.org/abs/2611.18238), about which small clusters to remove in e-means (a mini-batch k-means algorithm in FAISS), is available [here](https://github.com/eyal-weiss/emeans-distance-revival). It includes the experimental protocol and the run records for reproducing the paper.
 
 **Cost-Sensitive Neighborhood Aggregation (CSNA) for Heterophilous Graphs** — The code for our [arXiv paper](https://arxiv.org/abs/2603.24291), about per-edge routing in Graph Neural Networks (GNNs), is available [here](https://github.com/eyal-weiss/CSNA-public).
