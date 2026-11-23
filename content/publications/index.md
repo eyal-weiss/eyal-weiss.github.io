@@ -48,7 +48,7 @@ H. Peer, **E. Weiss**, R. Alterovitz, O. Salzman — *IEEE Robotics and Automati
 ## Multi-Agent Systems
 
 [From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem](https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140) · [Technical Companion (PDF)](/companions/agent_to_obstacle_planning_companion.pdf) 🏆 Best Paper Award
-Y. Sherma, **E. Weiss**, O. Salzman — *SoCS 2025*
+Y. Sherma, **E. Weiss**, O. Salzman — *SoCS 2025*; extended version, with H. Peer, accepted to *Artificial Intelligence (AIJ)*
 `multi-agent planning` `warehouse rearrangement` `makespan optimization`
 
 ## Control Theory & Dynamical Systems

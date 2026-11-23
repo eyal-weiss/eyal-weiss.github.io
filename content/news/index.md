@@ -8,6 +8,8 @@ ShowToc: false
 
 **News: announcements and ongoing projects**
 
+- Our paper *"From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem"* (with Y. Sherma, H. Peer and O. Salzman) was accepted for publication in the **Artificial Intelligence Journal (AIJ)** 🎉 It extends our SoCS 2025 paper, which won the **Best Paper Award**. The final version will be out in the next few months; until then, check out the [conference paper](https://ojs.aaai.org/index.php/SOCS/article/view/35985/38140) and the [blog post](/blog/2026-03-23-warehouse-rearrangement/) on its main idea: plan for the packages, not the robots.
+
 - New arXiv preprint 🎉 *"Small Is Not Dead: Distance-Aware Cluster Revival for e-means"*. e-means is a recent mini-batch k-means algorithm, now part of the FAISS library, that periodically removes small clusters and reuses their centers. Size alone cannot tell a redundant cluster from one that covers a rare, isolated group of points, so the paper adds a distance-based condition: a small cluster is removed only if its center is close to another center. On data with small isolated groups, this cuts the test error by roughly 10% to 80%; on the e-means paper's own benchmarks, the results are identical to FAISS. Check it out on [arXiv](https://arxiv.org/abs/2611.18238); the code is on [GitHub](https://github.com/eyal-weiss/emeans-distance-revival).
 
 - Our paper *"Generalizing Multi-Objective Search via Objective-Aggregation Functions"* (with H. Peer, R. Alterovitz and O. Salzman) was accepted to **IEEE Robotics and Automation Letters (RA-L)** 🎉 Check it out on [IEEE Xplore](https://doi.org/10.1109/LRA.2026.3741789) or [arXiv](https://arxiv.org/abs/2509.22085)!
