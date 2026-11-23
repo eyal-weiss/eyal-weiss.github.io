@@ -30,7 +30,7 @@ ShowToc: false
 
 - Physical integration of our group's motion planner with our prototype snake-like robot was successfully achieved.
 
-- Started work on extending our 2025 SoCS paper *"From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem"* in a few natural sub-optimal directions.
+- Started work on extending our 2025 SoCS paper *"From Agent Centric to Obstacle Centric Planning: A Makespan-Optimal Algorithm for the Multi-Agent Warehouse Rearrangement Problem"* in a few natural sub-optimal directions. Update: the extension was accepted to AIJ 🎉
 
 - Extension of our 2025 IJCAI paper *"Bidirectional Search while Ensuring Meet-In-The-Middle via Effective and Efficient-to-Compute Termination Conditions"* is almost done 😊. It extends both theory to provide better explanations to our results and empiric evaluation with additional domains, metrics and another ablation study.
 

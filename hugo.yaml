@@ -110,7 +110,7 @@ params:
     Featured:
       - title: "Plan for the packages, not the robots"
         text: "A makespan-optimal planner for warehouse rearrangement that plans paths for the packages instead of the robots."
-        venue: "SoCS 2025 · Best Paper Award"
+        venue: "SoCS 2025 · Best Paper Award · AIJ (accepted)"
         url: "/blog/2026-03-23-warehouse-rearrangement/"
         image: "/images/featured/warehouse.png"
         alt: "Initial and goal layouts of a small warehouse, with colored packages and two robots"
